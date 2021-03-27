@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply text-5xl my-2;
+  }
+  h3 {
+    @apply text-4xl my-2;
+  }
+  h4 {
+    @apply text-2xl my-2;
+  }
+  h5 {
+    @apply text-xl my-2;
+  }
+}
