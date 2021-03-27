@@ -14,7 +14,7 @@ const Card = ({ children, title, image, buttons }: ChildrenProps) => {
       {title ? <h2>{title}</h2> : ""}
       {children}
       {buttons
-        ? buttons.map((button: { onClick: any; text: string }) => (
+        ? buttons.map((button: { onClick: void; text: string }) => (
             <button onClick={button.onClick}>{button.text}</button>
           ))
         : ""}
