@@ -4,18 +4,18 @@ type ChildrenProps = {
   children: ComponentChildren;
   title?: string;
   image?: { url: string };
-  buttons?: [{ onClick: void; text: string }];
+  buttonList?: [{ clickFunction: void; text: string }];
 };
 
-const Card = ({ children, title, image, buttons }: ChildrenProps) => {
+const Card = ({ children, title, image, buttonList }: ChildrenProps) => {
   return (
     <div className="bg-gray-100 rounded-md m-1 p-4">
       {image ? <img src={image.url} /> : ""}
       {title ? <h2>{title}</h2> : ""}
       {children}
-      {buttons
-        ? buttons.map((button: { onClick: void; text: string }) => (
-            <button onClick={button.onClick}>{button.text}</button>
+      {buttonList
+        ? buttonList.map((button) => (
+            <button onClick={() => button.clickFunction}>{button.text}</button>
           ))
         : ""}
     </div>
