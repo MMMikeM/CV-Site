@@ -1,6 +1,7 @@
 const About = () => {
   return (
-    <>
+    <div className="my-12 ">
+      <h1 className="text-7xl font-semibold mt-2 mb-6 ">Hi there, I'm Mike</h1>
       <h2>About me</h2>
       <p>
         I have always had a passion for technology, particularly when it comes
@@ -16,10 +17,10 @@ const About = () => {
       <p>I started my journey in development at the beginning of 2019</p>
       <p>
         Prior to the social-distancing era, I enjoyed attending developer
-        meetups. However in 2020 I did attend online conferences and live
-        courses.
+        meetups. 2020 did open many doors to attend online conferences and
+        teleconferenced courses.
       </p>
-    </>
+    </div>
   );
 };
 
