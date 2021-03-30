@@ -3,32 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-  h2 {
-    @apply text-4xl my-2;
+  .h2 {
+    @apply text-4xl my-2 mono;
   }
-  h3 {
-    @apply text-2xl my-2;
+  .h3 {
+    @apply text-2xl my-2 mono;
   }
-  h4 {
-    @apply text-xl my-2;
+  .h4 {
+    @apply text-xl my-2 mono;
   }
-  h5 {
-    @apply text-lg my-2;
+  .h5 {
+    @apply text-lg my-2 mono;
   }
-  h6 {
-    @apply text-sm my-2;
+  .h6 {
+    @apply text-sm my-2 mono;
+  }
+
+  .li {
+    @apply flex items-center justify-start mb-4 ml-6 lg:ml-0;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  .wrapper {
+    @apply pt-16 min-vh flex flex-col justify-center items-start lg:-mt-50vh;
   }
 }
 
-@font-face {
-  font-family: "Recursive";
-  font-style: oblique 0deg 15deg;
+@layer utilities {
+  .gradient-text {
+    color: rgb(130, 249, 161);
+    background-color: black;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+  }
+  .mono {
+    font-variation-settings: "MONO" 1;
+  }
+  .min-vh {
+    min-height: 100vh;
+  }
 
-  font-display: swap;
-  src: url("./fonts/Recursive.woff2") format("woff2");
-}
-
-body {
-  font-family: "Recursive";
-  font-style: oblique;
+  .-mt-50vh {
+    margin-top: -25vh;
+  }
 }

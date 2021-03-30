@@ -1,11 +1,14 @@
 import Card from "../components/card";
 
-const Projects = () => {
+const Projects = ({ elementRef }) => {
   return (
-    <>
-      <h3>Things I have done</h3>
-      <Card title="Carbon Carwash">Yo</Card>
-    </>
+    <div ref={elementRef} className="wrapper">
+      <h2 className="h2 mb-8">Things I have done</h2>
+      <div className="flex mb-12">
+        <Card title="Carbon Carwash">Yo</Card>
+        <Card title="Contention Ratio CLI tool">Yo</Card>
+      </div>
+    </div>
   );
 };
 

@@ -1,36 +1,36 @@
 import Card from "../components/card";
 
-const Experience = () => {
+const Experience = ({ elementRef }) => {
   return (
-    <>
-      <h2>Places I've been</h2>
-      <div className="flex mb-12">
+    <div ref={elementRef} className="wrapper">
+      <h2 className="h2 mb-8">Places I've been</h2>
+      <div className="flex mb-12 flex-col lg:flex-row w-full">
         <Card
           title="Junior Frontend Developer"
-          classes="w-1/3"
+          classes="lg:w-1/3 w-full mr-8"
           linkPath="/experience/development"
         >
-          <h5>Saicom</h5>
-          <h6 className="mb-10">July 2020 - Present</h6>
+          <h3 className="h5">Saicom</h3>
+          <h4 className="mb-10">July 2020 - Present</h4>
         </Card>
         <Card
           title="Training Manager"
-          classes="w-1/3"
+          classes="lg:w-1/3 w-full mr-8"
           linkPath="/experience/training"
         >
-          <h5>Saicom</h5>
-          <h6 className="mb-10">Aug 2019 - June 2020</h6>
+          <h3 className="h5">Saicom</h3>
+          <h4 className="mb-10">Aug 2019 - June 2020</h4>
         </Card>
         <Card
           title="Network & VOIP Support Engineer"
-          classes="w-1/3"
+          classes="lg:w-1/3 w-full mr-8"
           linkPath="/experience/support"
         >
-          <h5>Saicom</h5>
-          <h6 className="mb-10">July 2018 - July 2019</h6>
+          <h3 className="h5">Saicom</h3>
+          <h4 className="mb-10">July 2018 - July 2019</h4>
         </Card>
       </div>
-    </>
+    </div>
   );
 };
 

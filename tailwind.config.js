@@ -6,8 +6,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        em: colors.emerald,
-        tg: colors.trueGray,
+        secondary: colors.emerald,
+        primary: colors.lightBlue,
+      },
+      fontFamily: {
+        sans: [
+          "Recursive",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
     },
   },
