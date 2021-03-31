@@ -1,6 +1,6 @@
 import Card from "../components/card";
 
-const Projects = ({ elementRef }) => {
+const Projects = ({ elementRef, setActiveView }) => {
   return (
     <div ref={elementRef} className="wrapper">
       <h2 className="h2 ">Things I have done</h2>

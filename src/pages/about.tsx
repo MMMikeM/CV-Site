@@ -1,5 +1,4 @@
 const About = ({ elementRef }) => {
-  console.log(typeof elementRef);
   return (
     <div className="wrapper" ref={elementRef}>
       <div className="flex flex-col-reverse md:flex-row">

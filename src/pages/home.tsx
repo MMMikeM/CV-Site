@@ -1,5 +1,4 @@
 const About = ({ elementRef }) => {
-  console.log(typeof elementRef);
   return (
     <div className="wrapper mt-0 flex flex-row" ref={elementRef}>
       <div className="my-auto max-w-[880px] mr-auto xl:pl-12">

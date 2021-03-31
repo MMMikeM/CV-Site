@@ -62,4 +62,36 @@
   .-mt-50vh {
     margin-top: -25vh;
   }
+
+  .main {
+    transition: left 600ms ease-in-out 300ms;
+    left: 0;
+  }
+
+  .main-hidden {
+    transition: left 600ms ease-in-out;
+    left: -100vw;
+  }
+  .right {
+    transition: left 600ms ease-in-out;
+    right: 0;
+    left: 100vw;
+  }
+
+  .right-active {
+    transition: left 600ms ease-in-out 300ms;
+    left: 0;
+  }
+
+  /* .right {
+    transition: right 500ms ease-in, left 500ms ease-in;
+    right: 100vw;
+    left: -100vw;
+  }
+
+  .right-active {
+    transition: right 500ms ease-out, right 500ms ease-out;
+    right: -100vw;
+    left: -100vw;
+  } */
 }

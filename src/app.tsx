@@ -17,6 +17,8 @@ export const App = () => {
       (localStorage.darkTheme === undefined &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
+  const [activeView, setActiveView] = useState("main");
+
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
   );
@@ -31,31 +33,40 @@ export const App = () => {
   }, []);
 
   const scroller = (input: number) => {
+    setActiveView("main");
     itemsRef[input].current.scrollIntoView({
       behavior: "smooth",
     });
   };
 
+  console.log(activeView);
+
   return (
-    <div className={"" + (darkTheme ? "dark" : "")}>
+    <div className={"overflow-x-hidden " + (darkTheme ? "dark" : "")}>
       {/* <Background /> */}
-      <div className="fixed inset-0 bg-black bg-opacity-30"></div>
+      <div className=" fixed inset-0 bg-black bg-opacity-30"></div>
       <Nav scroller={scroller} />
-      <div className="relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full">
-        {/* <Router> */}
-        {/* <Route exact path="/"> */}
+      <div
+        className={
+          "main relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full" +
+          (activeView === "main" ? "" : " main-hidden")
+        }
+      >
         {/* <Landing /> */}
-        {/* <button onClick={() => setDarkTheme(true)} className="h-48 w-48">
-          Theme
-        </button> */}
         <Home elementRef={itemsRef[0]} />
         <About elementRef={itemsRef[1]} />
         <Tech elementRef={itemsRef[2]} />
-        <Experience elementRef={itemsRef[3]} />
-        <Projects elementRef={itemsRef[4]} />
+        <Experience elementRef={itemsRef[3]} setActiveView={setActiveView} />
+        <Projects elementRef={itemsRef[4]} setActiveView={setActiveView} />
         <This elementRef={itemsRef[5]} />
-        {/* </Route> */}
-        {/* </Router> */}
+      </div>
+      <div
+        className={
+          "right fixed top-0 bottom-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full" +
+          (activeView !== "main" ? " right-active" : "")
+        }
+      >
+        <h4 className="h2">Yo</h4>
       </div>
     </div>
   );

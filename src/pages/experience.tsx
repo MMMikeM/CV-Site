@@ -1,6 +1,6 @@
 import Card from "../components/card";
 
-const Experience = ({ elementRef }) => {
+const Experience = ({ elementRef, setActiveView }) => {
   return (
     <div className="wrapper" ref={elementRef}>
       <h2 className="h2">Places I've been</h2>
@@ -8,7 +8,9 @@ const Experience = ({ elementRef }) => {
         <Card
           title="Junior Frontend Developer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
-          linkPath="/experience/development"
+          onClick={() => {
+            setActiveView("development");
+          }}
         >
           <div>
             <h3 className="h5">Saicom</h3>
@@ -18,7 +20,9 @@ const Experience = ({ elementRef }) => {
         <Card
           title="Training Manager"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
-          linkPath="/experience/training"
+          onClick={() => {
+            setActiveView("training");
+          }}
         >
           <div>
             <h3 className="h5">Saicom</h3>
@@ -28,7 +32,9 @@ const Experience = ({ elementRef }) => {
         <Card
           title="Network & VOIP Support Engineer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
-          linkPath="/experience/support"
+          onClick={() => {
+            setActiveView("support");
+          }}
         >
           <h3 className="h5">Saicom</h3>
           <h4 className="mb-10">July 2018 - July 2019</h4>

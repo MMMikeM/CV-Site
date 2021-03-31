@@ -1,23 +1,41 @@
 const Nav = ({ scroller }) => {
   return (
-    <div className="shadow-lg z-10 fixed bottom-0 md:top-0 left-0 right-0 bg-gray-800 h-16 text-xs font-light text-secondary-200">
+    <div className="shadow-lg z-10 fixed bottom-0 md:top-0 left-0 right-0 bg-gray-800 h-16 text-xs font-light text-secondary-200 overflow-x-scroll">
       <div className="responsive-container h-full flex justify-start items-center ">
-        <button className="px-4 focus:outline-none" onClick={() => scroller(0)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(0)}
+        >
           Home
         </button>
-        <button className="px-4 focus:outline-none" onClick={() => scroller(1)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(1)}
+        >
           About
         </button>
-        <button className="px-4 focus:outline-none" onClick={() => scroller(2)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(2)}
+        >
           Tech
         </button>
-        <button className="px-4 focus:outline-none" onClick={() => scroller(3)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(3)}
+        >
           Experience
         </button>
-        <button className="px-4 focus:outline-none" onClick={() => scroller(4)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(4)}
+        >
           Projects
         </button>
-        <button className="px-4 focus:outline-none" onClick={() => scroller(5)}>
+        <button
+          className="p-4 active:bg-secondary-500 active:text-white focus:outline-none"
+          onClick={() => scroller(5)}
+        >
           This page
         </button>
       </div>

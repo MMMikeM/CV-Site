@@ -6,10 +6,10 @@ type ChildrenProps = {
   title?: string;
   classes?: string;
   image?: { url: string };
-  linkPath?: string;
+  onClick?: any;
 };
 
-const Card = ({ children, classes, title, image, linkPath }: ChildrenProps) => {
+const Card = ({ children, classes, title, image, onClick }: ChildrenProps) => {
   return (
     <div
       className={
@@ -20,11 +20,11 @@ const Card = ({ children, classes, title, image, linkPath }: ChildrenProps) => {
       {image ? <img src={image.url} /> : ""}
       {title ? <h3 className="h4 mb-4 h-auto lg:h-16">{title}</h3> : ""}
       {children}
-      {linkPath ? (
+      {onClick ? (
         <div className="flex justify-start ">
           <button
             className="px-8 py-2 border-2 border-solid border-secondary-800 rounded-sm"
-            onClick={() => console.log(linkPath)}
+            onClick={() => onClick()}
           >
             More info
           </button>
