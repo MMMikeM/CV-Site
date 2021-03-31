@@ -30,6 +30,19 @@
   .wrapper {
     @apply pb-12 pt-8 md:pb-0 md:pt-24 lg:pt-16 min-vh flex flex-col justify-center items-start lg:-mt-50vh;
   }
+
+  .responsive-container {
+    @apply mx-auto max-w-xl md:max-w-3xl xl:max-w-6xl;
+  }
+
+  .responsive-helper {
+    @apply bg-blue-300 dark:bg-blue-900 
+    sm:bg-green-400 sm:dark:bg-green-900 
+    md:bg-yellow-300 md:dark:bg-yellow-900 
+    lg:bg-red-400 lg:dark:bg-red-900 
+    xl:bg-pink-400 xl:dark:bg-pink-900
+    2xl:bg-indigo-200 2xl:dark:bg-indigo-900;
+  }
 }
 
 @layer utilities {
