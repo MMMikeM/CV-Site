@@ -20,17 +20,22 @@ const About = ({ elementRef }) => {
           </h2>
         </div>
         <h2 className=" xl:text-3xl text-gray-400 font-light tracking-tighter mono">
-          return <span className="font-semibold text-white">(</span>
+          return <span className=" text-white font-medium">(</span>
         </h2>
 
         <h2 className="pb-2 text-3xl md:text-5xl xl:text-6xl gradient-text bg-gradient-to-br from-blue-100 to-primary-300">
           <div>
             <span className="">Frontend developer</span>
-            <span className="text-gray-400 text-lg xl:text-xl pl-2"> && </span>
+            <span className="text-gray-400 text-lg xl:text-xl pl-2 mono">
+              {" "}
+              &&{" "}
+            </span>
           </div>
           <span className="">Interface designer</span>
         </h2>
-        <h2 className="-mt-1.5 text-white pl-4 xl:text-3xl">)</h2>
+        <h2 className="-mt-1.5 text-white pl-4 xl:text-3xl mono font-medium">
+          )
+        </h2>
         <h2 className=" text-white xl:text-3xl">{"}"}</h2>
       </div>
     </div>
