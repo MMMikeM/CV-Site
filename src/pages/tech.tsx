@@ -22,15 +22,15 @@ const Tech = ({ elementRef }) => {
 
   return (
     <div ref={elementRef} className="wrapper">
-      <h2 className="h2 mb-8">Talking Tech</h2>
+      <h2 className="h2">Talking Tech</h2>
       <div className="flex w-full justify-around flex-col lg:flex-row ml-12 mb-8">
-        <div className="lg:w-1/3 w-full">
+        <div className="lg:w-1/3 w-full mb-12">
           <h3 className="mb-6">Languages</h3>
           <Icon name={"SiJavascript"} />
           <Icon name={"SiPostgresql"} pretty={"SQL"} />
           <Icon name={"SiGnubash"} pretty={"Bash"} />
         </div>
-        <div className="lg:w-1/3  w-full">
+        <div className="lg:w-1/3 w-full  mb-12">
           <h4 className="mb-6">Frameworks</h4>
           <Icon name={"SiReact"} />
           <Icon name={"SiTypescript"} />
@@ -38,7 +38,7 @@ const Tech = ({ elementRef }) => {
           <Icon name={"SiMaterialUi"} />
           <Icon name={"SiNodeDotJs"} pretty={"Node.JS"} />
         </div>
-        <div className="lg:w-1/3  w-full ">
+        <div className="lg:w-1/3 w-full mb-12">
           <h4 className="mb-6">Tooling</h4>
           <Icon name={"SiDocker"} />
           <Icon name={"SiGit"} />

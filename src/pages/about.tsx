@@ -2,8 +2,8 @@ const About = ({ elementRef }) => {
   console.log(typeof elementRef);
   return (
     <div className="wrapper" ref={elementRef}>
-      <div className="flex flex-row">
-        <div className="w-3/4">
+      <div className="flex flex-col-reverse md:flex-row">
+        <div className="md:w-3/4">
           <h2 className="h2 mb-4">About me</h2>
           <p>
             I have always had a passion for technology, particularly when it
@@ -24,7 +24,7 @@ const About = ({ elementRef }) => {
             teleconferenced courses.
           </p>
         </div>
-        <div className="w-1/4 ml-8 flex-grow bg-secondary-500 bg-opacity-30 flex justify-center items-center">
+        <div className="w-full h-72 md:h-auto md:w-1/4 md:ml-8 mb-16 md:mb-0 flex-grow bg-secondary-500 bg-opacity-30 flex justify-center items-center">
           <h3>image</h3>
         </div>
       </div>

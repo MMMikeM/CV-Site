@@ -4,16 +4,16 @@
 
 @layer base {
   .h2 {
-    @apply text-4xl my-2 mono;
+    @apply text-2xl sm:text-4xl mb-8 mono;
   }
   .h3 {
-    @apply text-2xl my-2 mono;
+    @apply text-xl sm:text-2xl my-2 mono;
   }
   .h4 {
-    @apply text-xl my-2 mono;
+    @apply text-lg sm:text-xl my-2 mono;
   }
   .h5 {
-    @apply text-lg my-2 mono;
+    @apply text-base sm:text-lg my-2 mono;
   }
   .h6 {
     @apply text-sm my-2 mono;
@@ -24,7 +24,7 @@
   }
 
   p {
-    @apply mb-2;
+    @apply mb-2 text-sm sm:text-base font-light;
   }
 
   .wrapper {
