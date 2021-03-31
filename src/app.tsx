@@ -39,8 +39,6 @@ export const App = () => {
     });
   };
 
-  console.log(activeView);
-
   return (
     <div className={"overflow-x-hidden " + (darkTheme ? "dark" : "")}>
       {/* <Background /> */}
@@ -48,7 +46,7 @@ export const App = () => {
       <Nav scroller={scroller} />
       <div
         className={
-          "main relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full" +
+          "main relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-6 sm:px-16 responsive-container min-h-full" +
           (activeView === "main" ? "" : " main-hidden")
         }
       >
