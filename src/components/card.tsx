@@ -1,5 +1,5 @@
 import { ComponentChildren } from "preact";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 type ChildrenProps = {
   children: ComponentChildren;
@@ -22,12 +22,12 @@ const Card = ({ children, classes, title, image, linkPath }: ChildrenProps) => {
       {children}
       {linkPath ? (
         <div className="flex justify-start ">
-          <Link
+          <button
             className="px-8 py-2 border-2 border-solid border-secondary-800 rounded-sm"
-            to={linkPath}
+            onClick={() => console.log(linkPath)}
           >
             More info
-          </Link>
+          </button>
         </div>
       ) : (
         ""

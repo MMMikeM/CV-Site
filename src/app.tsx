@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "preact/hooks";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -41,17 +41,17 @@ export const App = () => {
       <Background />
       <Nav scroller={scroller} />
       <div className="relative bg-gray-900 bg-opacity-75 text-blue-50 flex flex-col px-4 sm:px-16 sm:mx-8 md:mx-12 lg:mx-40 min-h-full">
-        <Router>
-          <Route exact path="/">
-            {/* <Landing /> */}
-            <Home elementRef={itemsRef[0]} />
-            <About elementRef={itemsRef[1]} />
-            <Tech elementRef={itemsRef[2]} />
-            <Experience elementRef={itemsRef[3]} />
-            <Projects elementRef={itemsRef[4]} />
-            <This elementRef={itemsRef[5]} />
-          </Route>
-        </Router>
+        {/* <Router> */}
+        {/* <Route exact path="/"> */}
+        {/* <Landing /> */}
+        <Home elementRef={itemsRef[0]} />
+        <About elementRef={itemsRef[1]} />
+        <Tech elementRef={itemsRef[2]} />
+        <Experience elementRef={itemsRef[3]} />
+        <Projects elementRef={itemsRef[4]} />
+        <This elementRef={itemsRef[5]} />
+        {/* </Route> */}
+        {/* </Router> */}
       </div>
     </div>
   );
