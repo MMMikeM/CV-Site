@@ -28,7 +28,7 @@
   }
 
   .wrapper {
-    @apply pt-16 min-vh flex flex-col justify-center items-start lg:-mt-50vh;
+    @apply pb-12 pt-8 md:pb-0 md:pt-24 lg:pt-16 min-vh flex flex-col justify-center items-start lg:-mt-50vh;
   }
 }
 

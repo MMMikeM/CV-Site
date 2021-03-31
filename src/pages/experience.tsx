@@ -4,26 +4,30 @@ const Experience = ({ elementRef }) => {
   return (
     <div ref={elementRef} className="wrapper">
       <h2 className="h2 mb-8">Places I've been</h2>
-      <div className="flex mb-12 flex-col lg:flex-row w-full">
+      <div className="flex mb-12 flex-col items-center lg:flex-row w-full">
         <Card
           title="Junior Frontend Developer"
-          classes="lg:w-1/3 w-full mr-8"
+          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between"
           linkPath="/experience/development"
         >
-          <h3 className="h5">Saicom</h3>
-          <h4 className="mb-10">July 2020 - Present</h4>
+          <div>
+            <h3 className="h5">Saicom</h3>
+            <h4 className="mb-10">July 2020 - Present</h4>
+          </div>
         </Card>
         <Card
           title="Training Manager"
-          classes="lg:w-1/3 w-full mr-8"
+          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between"
           linkPath="/experience/training"
         >
-          <h3 className="h5">Saicom</h3>
-          <h4 className="mb-10">Aug 2019 - June 2020</h4>
+          <div>
+            <h3 className="h5">Saicom</h3>
+            <h4 className="mb-10">Aug 2019 - June 2020</h4>
+          </div>
         </Card>
         <Card
           title="Network & VOIP Support Engineer"
-          classes="lg:w-1/3 w-full mr-8"
+          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between"
           linkPath="/experience/support"
         >
           <h3 className="h5">Saicom</h3>
