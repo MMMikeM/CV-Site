@@ -32,7 +32,7 @@
   }
 
   .responsive-container {
-    @apply mx-auto max-w-xl md:max-w-3xl xl:max-w-6xl;
+    @apply mx-auto max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-screen-xl;
   }
 
   .responsive-helper {

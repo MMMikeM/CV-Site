@@ -40,7 +40,7 @@ export const App = () => {
     <div className={"" + (darkTheme ? "dark" : "")}>
       <Background />
       <Nav scroller={scroller} />
-      <div className="relative bg-gray-900 bg-opacity-75 text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full">
+      <div className="relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full">
         {/* <Router> */}
         {/* <Route exact path="/"> */}
         {/* <Landing /> */}
