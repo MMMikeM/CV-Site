@@ -23,7 +23,7 @@ const Card = ({ children, classes, title, image, onClick }: ChildrenProps) => {
       {onClick ? (
         <div className="flex justify-start ">
           <button
-            className="px-8 py-2 border-2 border-solid border-secondary-800 rounded-sm"
+            className="px-8 py-2 bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white rounded-sm"
             onClick={() => onClick()}
           >
             More info

@@ -23,11 +23,13 @@ const AsidePage = ({ setActiveView, activeView }) => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper mt-0">
       {page()}
       <button
-        className="bg-red-500"
-        onClick={() => setActiveView({ ...activeView, view: "main" })}
+        className="bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white h-12 w-48 mt-12  rounded-sm"
+        onClick={() => {
+          setActiveView({ ...activeView, view: "main" });
+        }}
       >
         Return
       </button>

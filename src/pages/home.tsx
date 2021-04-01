@@ -1,7 +1,7 @@
 const About = ({ elementRef }) => {
   return (
     <div className="wrapper mt-0 flex flex-row" ref={elementRef}>
-      <div className="my-auto max-w-[880px] ml-3 mr-auto xl:pl-12">
+      <div className="my-auto max-w-[880px] sm:ml-3 ml-auto  mr-auto xl:pl-12">
         <h2 className="text-lg xl:text-4xl text-gray-400">Hi there</h2>
         <div className="flex flex-wrap">
           <h1 className="text-3xl md:text-5xl xl:text-7xl font-semibold">

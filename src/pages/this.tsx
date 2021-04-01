@@ -27,17 +27,17 @@ const This = ({ elementRef }) => {
       <table className="my-4 mx-4 lg:mx-8 text-left w-full">
         <tr>
           <th className="pr-12">Framework</th>
-          <th className="pr-12">Bundle Size</th>
+          <th className="pr-12">Bundle Size (excl font)</th>
           <th className="pr-12">DOMContent (Fast 3g)</th>
         </tr>
         <tr>
           <td>React</td>
-          <td>441kB</td>
+          <td>241kB</td>
           <td>2.1s</td>
         </tr>
         <tr>
           <td>Preact</td>
-          <td>241kB</td>
+          <td>41kB</td>
           <td>1.4s</td>
         </tr>
       </table>
