@@ -9,7 +9,7 @@ const Experience = ({ elementRef, setActiveView }) => {
           title="Junior Frontend Developer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
           onClick={() => {
-            setActiveView("development");
+            setActiveView({ view: "aside", aside: "development" });
           }}
         >
           <div>
@@ -21,7 +21,7 @@ const Experience = ({ elementRef, setActiveView }) => {
           title="Training Manager"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
           onClick={() => {
-            setActiveView("training");
+            setActiveView({ view: "aside", aside: "training" });
           }}
         >
           <div>
@@ -33,7 +33,7 @@ const Experience = ({ elementRef, setActiveView }) => {
           title="Network & VOIP Support Engineer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
           onClick={() => {
-            setActiveView("support");
+            setActiveView({ view: "aside", aside: "support" });
           }}
         >
           <h3 className="h5">Saicom</h3>

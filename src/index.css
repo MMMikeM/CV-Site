@@ -45,7 +45,7 @@
   }
 
   .nav-item {
-    @apply px-4 h-12 text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
+    @apply px-1 sm:px-4 h-12 text-[10px] sm:text-xs font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
   }
 }
 
@@ -74,17 +74,18 @@
 
   .main-hidden {
     transition: left 600ms ease-in-out;
-    left: -100vw;
+    left: -110vw;
   }
   .right {
-    transition: left 600ms ease-in-out;
-    right: 0;
-    left: 100vw;
+    transition: left 600ms ease-in-out, right 600ms ease-in-out;
+    right: -110vw;
+    left: 110vw;
   }
 
   .right-active {
-    transition: left 600ms ease-in-out 300ms;
-    left: 0;
+    transition: left 600ms ease-in-out 300ms, right 600ms ease-in-out 300ms;
+    left: 0vw;
+    right: 0vw;
   }
 
   /* .right {

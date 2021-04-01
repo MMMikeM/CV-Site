@@ -5,11 +5,11 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Tech from "./pages/tech";
 import Experience from "./pages/experience";
+import AsidePage from "./pages/asidePage";
 import Projects from "./pages/projects";
 import Landing from "./pages/landing";
 import This from "./pages/this";
 import Nav from "./components/nav";
-import Background from "./svg/background";
 
 export const App = () => {
   const [darkTheme, setDarkTheme] = useState(
@@ -17,7 +17,7 @@ export const App = () => {
       (localStorage.darkTheme === undefined &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
-  const [activeView, setActiveView] = useState("main");
+  const [activeView, setActiveView] = useState({ view: "main", aside: "" });
 
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
@@ -33,7 +33,7 @@ export const App = () => {
   }, []);
 
   const scroller = (input: number) => {
-    setActiveView("main");
+    setActiveView({ ...activeView, view: "main" });
     itemsRef[input].current.scrollIntoView({
       behavior: "smooth",
     });
@@ -47,7 +47,7 @@ export const App = () => {
       <div
         className={
           "main relative bg-gray-900 shadow-lg bg- text-blue-50 flex flex-col px-6 sm:px-16 responsive-container min-h-full" +
-          (activeView === "main" ? "" : " main-hidden")
+          (activeView.view === "main" ? "" : " main-hidden")
         }
       >
         {/* <Landing /> */}
@@ -61,10 +61,10 @@ export const App = () => {
       <div
         className={
           "right fixed top-0 bottom-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full" +
-          (activeView !== "main" ? " right-active" : "")
+          (activeView.view !== "main" ? " right-active" : "")
         }
       >
-        <h4 className="h2">Yo</h4>
+        <AsidePage activeView={activeView} setActiveView={setActiveView} />
       </div>
     </div>
   );
