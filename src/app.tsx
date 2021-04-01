@@ -33,10 +33,14 @@ export const App = () => {
   }, []);
 
   const scroller = (input: number) => {
+    if (activeView.aside === "aside") {
+      itemsRef[input].current.scrollIntoView({});
+    } else {
+      itemsRef[input].current.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
     setActiveView({ ...activeView, view: "main" });
-    itemsRef[input].current.scrollIntoView({
-      behavior: "smooth",
-    });
   };
 
   return (
