@@ -64,7 +64,7 @@ export const App = () => {
       </div>
       <div
         className={
-          "right fixed top-0 bottom-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full" +
+          "right fixed top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
           (activeView.view !== "main" ? " right-active" : "")
         }
       >

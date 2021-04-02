@@ -23,10 +23,10 @@ const AsidePage = ({ setActiveView, activeView }) => {
   };
 
   return (
-    <div className="wrapper mt-0">
+    <div className="px-2 pb-20 sm:pb-0 pt-4 flex-grow flex flex-col justify-center">
       {page()}
       <button
-        className="bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white h-12 w-48 mt-12  rounded-sm"
+        className="bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white h-12 w-48 mt-12 mb-4 rounded-sm"
         onClick={() => {
           setActiveView({ ...activeView, view: "main" });
         }}
