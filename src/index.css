@@ -68,35 +68,21 @@
   }
 
   .main {
-    transition: left 600ms ease-in-out 300ms;
-    left: 0;
+    transform: translateX(0vw);
+    transition: transform 700ms ease-in-out 50ms;
   }
 
   .main-hidden {
-    transition: left 600ms ease-in-out;
-    left: -110vw;
+    transform: translateX(-110vw);
+    transition: transform 700ms ease-in-out;
   }
-  .right {
-    transition: left 600ms ease-in-out, right 600ms ease-in-out;
-    right: -110vw;
-    left: 110vw;
-  }
-
-  .right-active {
-    transition: left 600ms ease-in-out 300ms, right 600ms ease-in-out 300ms;
-    left: 0vw;
-    right: 0vw;
+  .aside {
+    transform: translateX(110vw);
+    transition: transform 700ms ease-in-out;
   }
 
-  /* .right {
-    transition: right 500ms ease-in, left 500ms ease-in;
-    right: 100vw;
-    left: -100vw;
+  .aside-active {
+    transform: translateX(0vw);
+    transition: transform 700ms ease-in-out 50ms;
   }
-
-  .right-active {
-    transition: right 500ms ease-out, right 500ms ease-out;
-    right: -100vw;
-    left: -100vw;
-  } */
 }
