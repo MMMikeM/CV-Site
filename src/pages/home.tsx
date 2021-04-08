@@ -23,7 +23,7 @@ const About = ({ elementRef }) => {
           return <span className=" text-white font-medium">(</span>
         </h2>
 
-        <h2 className="pb-2 text-3xl md:text-5xl xl:text-6xl gradient-text bg-gradient-to-br from-blue-100 to-primary-300">
+        <h2 className="pb-2 text-3xl md:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-br from-blue-100 to-primary-300">
           <div>
             <span className="">Frontend developer</span>
             <span className="text-gray-400 text-lg xl:text-xl pl-2 mono">

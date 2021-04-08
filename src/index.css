@@ -28,7 +28,7 @@
   }
 
   .wrapper {
-    @apply pb-12 pt-8 md:pb-0 md:pt-24 lg:pt-16 min-vh flex flex-col justify-center items-start lg:-mt-50vh;
+    @apply pb-12 pt-8 md:pb-0 md:pt-24 lg:pt-16 min-vh flex flex-col justify-center items-start lg:-mt-20vh;
   }
 
   .responsive-container {
@@ -47,24 +47,21 @@
   .nav-item {
     @apply px-1 sm:px-4 h-12 text-[10px] sm:text-xs font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
   }
+
+  .experience-item {
+    @apply mb-0.5 2xl:mb-1 pl-3 text-sm sm:text-base font-light;
+  }
 }
 
 @layer utilities {
-  .gradient-text {
-    color: rgb(130, 249, 161);
-    background-color: black;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    background-clip: text;
-  }
   .mono {
     font-variation-settings: "MONO" 1;
   }
   .min-vh {
     min-height: 100vh;
   }
-
-  .-mt-50vh {
-    margin-top: -25vh;
+  .-mt-20vh {
+    margin-top: -20vh;
   }
 
   .main {

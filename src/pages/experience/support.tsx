@@ -11,34 +11,26 @@ const Support = () => {
       </h4>
       <h3 className="h3 text-primary-200">Key responsibilities</h3>
       <ul className="ml-8 list-disc">
-        <li className="mb-1 pl-3 mt-4">Assisting customers with queries</li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
+        <li className="experience-item mt-4">
+          Assisting customers with queries
+        </li>
+        <li className="experience-item">
           Resolving customer escalations and client visits
         </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
+        <li className="experience-item">
           Configuring VOIP and networking equipment
         </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
+        <li className="experience-item">
           Project lead for Microsoft365 to G-Suite Migration
         </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
-          G-Suite superadmin
-        </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
-          Administrating Zendesk
-        </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
-          Internal IT
-        </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
+        <li className="experience-item">G-Suite superadmin</li>
+        <li className="experience-item">Administrating Zendesk</li>
+        <li className="experience-item">Internal IT</li>
+        <li className="experience-item">
           Domain, DNS and MX Record management
         </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
-          Troubleshooting and problem solving
-        </li>
-        <li className="mb-0.5 sm:mb-1 pl-3 text-sm sm:text-base font-light">
-          Maintaining documentation
-        </li>
+        <li className="experience-item">Troubleshooting and problem solving</li>
+        <li className="experience-item">Maintaining documentation</li>
       </ul>
     </div>
   );
