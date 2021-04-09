@@ -49,7 +49,7 @@
   }
 
   .experience-item {
-    @apply mb-0.5 2xl:mb-1 pl-3 text-sm sm:text-base font-light;
+    @apply mb-0.5 2xl:mb-1 pl-3 text-sm sm:text-base lg:text-lg font-light;
   }
 }
 
@@ -81,5 +81,14 @@
   .aside-active {
     transform: translateX(0vw);
     transition: transform 700ms ease-in-out 50ms;
+  }
+
+  .csstimer {
+    opacity: 1;
+  }
+
+  .csstimer-done {
+    opacity: 0;
+    transition: opacity 500ms ease-in 1500ms;
   }
 }

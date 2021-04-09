@@ -36,6 +36,7 @@ export const App = () => {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
   const [activeView, setActiveView] = useState({ view: "main", aside: "" });
+  const [navigateClass, setNavigateClass] = useState("");
 
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
@@ -48,6 +49,7 @@ export const App = () => {
 
   useEffect(() => {
     import("./fonts/font");
+    setNavigateClass(" csstimer-done");
   }, []);
 
   const scroller = (input: number) => {
@@ -111,22 +113,31 @@ export const App = () => {
       {/* <Background /> */}
       <div className=" fixed inset-0 bg-black bg-opacity-30"></div>
       <Nav scroller={scroller} />
-      <div className="text-white font-bold z-20 fixed right-10 bottom-10 invisible md:visible">
-        <div className="h-12 w-12  mb-2">
-          <button
-            className="bg-white bg-opacity-20 hover:bg-opacity-40 h-full w-full focus:outline-none transform active:scale-110 rotate-180 "
-            onClick={() => upScroll(onScreenItems)}
-          >
-            V
-          </button>
-        </div>
-        <div className="h-12 w-12">
-          <button
-            className="bg-white bg-opacity-20 hover:bg-opacity-40  h-full w-full focus:outline-none transform active:scale-110 "
-            onClick={() => downScroll(onScreenItems)}
-          >
-            V
-          </button>
+      <div className="flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-10 invisible lg:visible">
+        <h2
+          className={
+            "mr-4 h5 font-normal text-secondary-500 csstimer" + navigateClass
+          }
+        >
+          You can navigate here
+        </h2>
+        <div>
+          <div className="h-12 w-12 mb-2">
+            <button
+              className="bg-white bg-opacity-20 hover:bg-opacity-40 h-full w-full focus:outline-none transform active:scale-110 rotate-180 "
+              onClick={() => upScroll(onScreenItems)}
+            >
+              V
+            </button>
+          </div>
+          <div className="h-12 w-12">
+            <button
+              className="bg-white bg-opacity-20 hover:bg-opacity-40  h-full w-full focus:outline-none transform active:scale-110 "
+              onClick={() => downScroll(onScreenItems)}
+            >
+              V
+            </button>
+          </div>
         </div>
       </div>
       <div
