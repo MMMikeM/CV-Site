@@ -1,6 +1,6 @@
-import iconList from "../svg/icons";
+import { useState, useEffect, useRef } from "preact/hooks";
 
-const Tech = ({ elementRef }) => {
+const Tech = ({ elementRef, iconList }) => {
   const Icon = ({ name, pretty }: { name: string; pretty?: string }) => {
     const icon = iconList?.filter((item) => item.title === name)[0];
     return (
@@ -22,32 +22,38 @@ const Tech = ({ elementRef }) => {
 
   return (
     <div ref={elementRef} className="wrapper">
-      <h2 className="h2">Talking Tech</h2>
-      <div className="flex w-full justify-around flex-col lg:flex-row ml-12 mb-8">
-        <div className="lg:w-1/3 w-full mb-12">
-          <h3 className="mb-6">Languages</h3>
-          <Icon name={"SiJavascript"} />
-          <Icon name={"SiPostgresql"} pretty={"SQL"} />
-          <Icon name={"SiGnubash"} pretty={"Bash"} />
-        </div>
-        <div className="lg:w-1/3 w-full  mb-12">
-          <h4 className="mb-6">Frameworks</h4>
-          <Icon name={"SiReact"} />
-          <Icon name={"SiTypescript"} />
-          <Icon name={"SiTailwindcss"} />
-          <Icon name={"SiMaterialUi"} />
-          <Icon name={"SiNodeDotJs"} pretty={"Node.JS"} />
-        </div>
-        <div className="lg:w-1/3 w-full mb-12">
-          <h4 className="mb-6">Tooling</h4>
-          <Icon name={"SiDocker"} />
-          <Icon name={"SiGit"} />
-          <Icon name={"SiMongodb"} />
-          <Icon name={"SiLinux"} />
-          <Icon name={"SiFigma"} />
-          <Icon name={"SiJira"} />
-        </div>
-      </div>
+      {iconList.length ? (
+        <>
+          <h2 className="h2">Talking Tech</h2>
+          <div className="flex w-full justify-around flex-col lg:flex-row ml-12 mb-8">
+            <div className="lg:w-1/3 w-full mb-12">
+              <h3 className="mb-6">Languages</h3>
+              <Icon name={"SiJavascript"} />
+              <Icon name={"SiPostgresql"} pretty={"SQL"} />
+              <Icon name={"SiGnubash"} pretty={"Bash"} />
+            </div>
+            <div className="lg:w-1/3 w-full  mb-12">
+              <h4 className="mb-6">Frameworks</h4>
+              <Icon name={"SiReact"} />
+              <Icon name={"SiTypescript"} />
+              <Icon name={"SiTailwindcss"} />
+              <Icon name={"SiMaterialUi"} />
+              <Icon name={"SiNodeDotJs"} pretty={"Node.JS"} />
+            </div>
+            <div className="lg:w-1/3 w-full mb-12">
+              <h4 className="mb-6">Tooling</h4>
+              <Icon name={"SiDocker"} />
+              <Icon name={"SiGit"} />
+              <Icon name={"SiMongodb"} />
+              <Icon name={"SiLinux"} />
+              <Icon name={"SiFigma"} />
+              <Icon name={"SiJira"} />
+            </div>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

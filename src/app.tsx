@@ -37,6 +37,7 @@ export const App = () => {
   );
   const [activeView, setActiveView] = useState({ view: "main", aside: "" });
   const [navigateClass, setNavigateClass] = useState("");
+  const [iconList, setIconList] = useState<any>([]);
 
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
@@ -48,7 +49,8 @@ export const App = () => {
   };
 
   useEffect(() => {
-    import("./fonts/font");
+    // import("./fonts/font");
+    import("./svg/icons").then((icons) => setIconList(icons.default));
     setNavigateClass(" csstimer-done");
   }, []);
 
@@ -107,14 +109,20 @@ export const App = () => {
   };
 
   return (
-    <div className={"overflow-x-hidden " + (darkTheme ? "dark" : "")}>
-      {/* <Background /> */}
+    <div className={"overflow-hidden " + (darkTheme ? "dark" : "")}>
+      <Landing />
+
       <div className=" fixed inset-0 bg-black bg-opacity-30"></div>
       <Nav scroller={scroller} />
-      <div className="flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-10 invisible lg:visible">
+      <div
+        className={
+          "flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-10 invisible lg:visible transform transition-transform" +
+          (activeView.view !== "main" ? " translate-x-96 " : "")
+        }
+      >
         <h2
           className={
-            "mr-4 h4 font-normal text-secondary-500 csstimer" + navigateClass
+            "mr-4 h3 font-normal text-secondary-400 csstimer" + navigateClass
           }
         >
           Navigate here
@@ -146,7 +154,7 @@ export const App = () => {
       >
         <Home elementRef={itemsRef[0]} />
         <About elementRef={itemsRef[1]} />
-        <Tech elementRef={itemsRef[2]} />
+        <Tech elementRef={itemsRef[2]} iconList={iconList} />
         <Experience elementRef={itemsRef[3]} setActiveView={setActiveView} />
         <Projects elementRef={itemsRef[4]} setActiveView={setActiveView} />
         <This elementRef={itemsRef[5]} />
