@@ -49,7 +49,7 @@
   }
 
   .experience-item {
-    @apply mb-0.5 2xl:mb-1 pl-3 text-sm sm:text-base lg:text-lg font-light;
+    @apply mb-0.5 xl:mb-2 pl-3 text-sm sm:text-base lg:text-lg font-light;
   }
 }
 

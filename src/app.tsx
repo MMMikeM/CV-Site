@@ -73,7 +73,6 @@ export const App = () => {
   };
 
   const downScroll = (input) => {
-    console.log(input);
     if (input[0] && input[1] && !input[2]) {
       scroller(1);
     } else if (input[1] && input[2] && !input[3]) {
@@ -88,7 +87,6 @@ export const App = () => {
   };
 
   const upScroll = (input) => {
-    console.log(input);
     if (input[0]) {
       scroller(0);
     } else if (

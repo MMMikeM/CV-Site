@@ -24,11 +24,16 @@ const This = ({ elementRef }) => {
         set of libraries had a bundle size of 441kg and loaded DOMContent in
         ~2.1s using the "Fast 3G" profile and a load time of 600ms.
       </p>
-      <table className="my-4 mx-4 lg:mx-8 text-left w-full">
+      <table className="my-4 mx-4 lg:mx-8 text-left w-full text-sm sm:text-base">
         <tr>
-          <th className="pr-12">Framework</th>
-          <th className="pr-12">Bundle Size (excl font)</th>
-          <th className="pr-12">DOMContent (Fast 3g)</th>
+          <th className="pr-4 sm:pr-12 align-top">Framework</th>
+          <th className="pr-4 sm:pr-12">
+            Bundle Size
+            <span className="hidden sm:block"> (excl font)</span>
+          </th>
+          <th className="pr-4 sm:pr-12">
+            DOMContent<span className="hidden sm:block"> (Fast 3g)</span>
+          </th>
         </tr>
         <tr>
           <td>React</td>
