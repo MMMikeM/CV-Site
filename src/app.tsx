@@ -116,10 +116,10 @@ export const App = () => {
       <div className="flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-10 invisible lg:visible">
         <h2
           className={
-            "mr-4 h5 font-normal text-secondary-500 csstimer" + navigateClass
+            "mr-4 h4 font-normal text-secondary-500 csstimer" + navigateClass
           }
         >
-          You can navigate here
+          Navigate here
         </h2>
         <div>
           <div className="h-12 w-12 mb-2">
