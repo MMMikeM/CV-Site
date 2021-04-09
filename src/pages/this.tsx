@@ -1,10 +1,6 @@
-// interface IProps {
-//   ref: <HTMLElement>
-// }
-
 const This = ({ elementRef }) => {
   return (
-    <div ref={elementRef} className="wrapper h-1/3">
+    <div ref={elementRef} className="wrapper h-1/3 -mb-12">
       <h2 className="h2">Some fun things about this site</h2>
       <p>
         I debated heavily between using a static site generator or writing a SPA

@@ -13,7 +13,7 @@ const Projects = ({ elementRef, setActiveView }) => {
           }}
         >
           <div>
-            <h3 className="h5">Saicom</h3>
+            <h3 className="h5">React & Bootstrap</h3>
             <h4 className="mb-10">July 2020</h4>
           </div>
         </Card>
@@ -25,7 +25,7 @@ const Projects = ({ elementRef, setActiveView }) => {
           }}
         >
           <div>
-            <h3 className="h5">Saicom</h3>
+            <h3 className="h5">NodeJS & Jest</h3>
             <h4 className="mb-10">February 2021</h4>
           </div>
         </Card>

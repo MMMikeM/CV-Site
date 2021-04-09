@@ -61,7 +61,7 @@
     min-height: 100vh;
   }
   .-mt-20vh {
-    margin-top: -20vh;
+    margin-bottom: -25vh;
   }
 
   .main {
@@ -84,6 +84,7 @@
   }
 
   .csstimer {
+    animation-delay: 2500ms;
     animation-duration: 3s;
     animation-name: navigation;
     opacity: 0;
@@ -94,15 +95,29 @@
       opacity: 0;
     }
 
-    25% {
+    20% {
       opacity: 1;
     }
-    75% {
+    80% {
       opacity: 1;
     }
 
     to {
       opacity: 0;
     }
+  }
+
+  .landing {
+    transform: translateY(-100vw);
+    opacity: 0;
+    transition: opacity 700ms ease-in 1200ms,
+      transform 1000ms ease-in-out 1900ms;
+  }
+
+  .landing > div {
+    transform: translateY(-125vw);
+    transition: transform 1000ms ease-in-out 600ms;
+    /* opacity: 0;
+    transition: opacity 700ms ease-in 1000ms; */
   }
 }
