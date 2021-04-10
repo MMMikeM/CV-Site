@@ -25,7 +25,7 @@ const About = ({ elementRef }) => {
             teleconferenced courses.
           </p>
         </div>
-        <div className="w-full h-72 md:h-auto md:w-1/4 md:ml-8 mb-16 md:mb-0 flex-grow bg-secondary-500 bg-opacity-30 flex justify-center items-center">
+        <div className="h-72 md:h-auto w-full sm:w-1/2 xl:w-1/3 md:ml-8 mb-16 md:mb-0 flex-grow bg-secondary-500 bg-opacity-30 flex justify-center items-center">
           <h3>image</h3>
         </div>
       </div>

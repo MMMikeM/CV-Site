@@ -20,7 +20,7 @@
   }
 
   .li {
-    @apply flex items-center justify-start mb-4 ml-6 lg:ml-0;
+    @apply flex items-center justify-start ml-6 lg:ml-0;
   }
 
   p {
@@ -45,7 +45,7 @@
   }
 
   .nav-item {
-    @apply px-1 sm:px-4 h-12 text-[10px] sm:text-xs font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
+    @apply px-1 sm:px-4 h-12 text-[10px] sm:text-sm font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
   }
 
   .experience-item {

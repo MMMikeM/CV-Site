@@ -18,7 +18,7 @@ const Card = ({ children, classes, title, image, onClick }: ChildrenProps) => {
       }
     >
       {image ? <img src={image.url} /> : ""}
-      {title ? <h3 className="h4 mb-4 h-auto lg:h-16">{title}</h3> : ""}
+      {title ? <h3 className="h3 mb-4 h-auto lg:h-16">{title}</h3> : ""}
       {children}
       {onClick ? (
         <div className="flex justify-start ">

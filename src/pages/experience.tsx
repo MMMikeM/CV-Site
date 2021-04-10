@@ -4,7 +4,7 @@ const Experience = ({ elementRef, setActiveView }) => {
   return (
     <div className="wrapper" ref={elementRef}>
       <h2 className="h2">Places I've been</h2>
-      <div className="flex mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full  mx-auto">
+      <div className="flex mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full mx-auto">
         <Card
           title="Junior Frontend Developer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
@@ -13,8 +13,8 @@ const Experience = ({ elementRef, setActiveView }) => {
           }}
         >
           <div>
-            <h3 className="h5">Saicom</h3>
-            <h4 className="mb-10">July 2020 - Present</h4>
+            <h3 className="h5 mt-12">Saicom</h3>
+            <h4 className="mb-10 text-primary-200">July 2020 - Present</h4>
           </div>
         </Card>
         <Card
@@ -25,8 +25,8 @@ const Experience = ({ elementRef, setActiveView }) => {
           }}
         >
           <div>
-            <h3 className="h5">Saicom</h3>
-            <h4 className="mb-10">Aug 2019 - June 2020</h4>
+            <h3 className="h5 mt-12">Saicom</h3>
+            <h4 className="mb-10 text-primary-200">Aug 2019 - June 2020</h4>
           </div>
         </Card>
         <Card
@@ -36,8 +36,8 @@ const Experience = ({ elementRef, setActiveView }) => {
             setActiveView({ view: "aside", aside: "support" });
           }}
         >
-          <h3 className="h5">Saicom</h3>
-          <h4 className="mb-10">July 2018 - July 2019</h4>
+          <h3 className="h5 mt-12">Saicom</h3>
+          <h4 className="mb-10 text-primary-200">July 2018 - July 2019</h4>
         </Card>
       </div>
     </div>
