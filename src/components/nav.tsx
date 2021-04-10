@@ -17,9 +17,6 @@ const Nav = ({ scroller }) => {
         <button className="nav-item" onClick={() => scroller(4)}>
           Projects
         </button>
-        <button className="nav-item" onClick={() => scroller(5)}>
-          This page
-        </button>
       </div>
     </div>
   );
