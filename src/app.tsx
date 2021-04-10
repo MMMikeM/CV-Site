@@ -85,7 +85,7 @@ export const App = () => {
       }
     >
       {/* <div className="fixed inset-0 bg-black bg-opacity-30"></div> */}
-      {/* <Landing /> */}
+      <Landing />
       <Nav scroller={scroller} />
       <Scroller
         activeView={activeView}

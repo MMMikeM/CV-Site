@@ -2,21 +2,27 @@ const Icon = ({
   name,
   pretty,
   iconList,
+  svgClass,
+  width,
+  height,
 }: {
   name: string;
   pretty?: string;
   iconList: any;
+  svgClass?: string;
+  width?: string;
+  height?: string;
 }) => {
   const icon = iconList?.filter((item) => item.title === name)[0];
   return (
-    <div className="li text-primary-100 fill-current">
+    <div className={"li text-primary-100 fill-current " + svgClass || ""}>
       <svg
         version="1.2"
         baseProfile="tiny"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        width="24px"
-        height="24px"
+        width={width || "24px"}
+        height={height || "24px"}
       >
         <path d={icon?.path || ""} />
       </svg>

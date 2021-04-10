@@ -118,18 +118,13 @@
   }
 
   .landing {
-    transform: translateY(-100vw);
-    /* transform 1000ms ease-in-out 1900ms; */
+    transform: translate3d(0, -100vh, 0);
     opacity: 0;
-    transition: opacity 700ms ease-in 1200ms;
+    transition: opacity 700ms ease-in 750ms, transform 0ms ease-in-out 1450ms;
   }
 
   .landing > div {
-    transform: translateY(-125vw);
-    transition: transform 1000ms ease-in-out 600ms;
-    backface-visibility: hidden;
-    perspective: 1000;
-    /* opacity: 0;
-    transition: opacity 700ms ease-in 1000ms; */
+    transform: translate3d(0, -100vh, 0);
+    transition: transform 1000ms ease-out 600ms;
   }
 }

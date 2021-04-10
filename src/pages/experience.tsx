@@ -4,7 +4,7 @@ const Experience = ({ elementRef, setActiveView }) => {
   return (
     <div className="wrapper" ref={elementRef}>
       <h2 className="h2">Places I've been</h2>
-      <div className="flex mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full mx-auto">
+      <div className="flex md:mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full mx-auto">
         <Card
           title="Junior Frontend Developer"
           classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
