@@ -1,8 +1,10 @@
 const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
   const downScroll = (input) => {
-    if (input[0] && input[1] && !input[2]) {
+    console.log(input);
+    if (input[0] && !input[2]) {
       scroller(1);
     } else if (input[1] && input[2] && !input[3]) {
+      console.log("wat");
       scroller(2);
     } else if (input[2] && input[3] && !input[4]) {
       scroller(3);
@@ -14,21 +16,25 @@ const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
   };
 
   const upScroll = (input) => {
+    console.log(input);
     if (input[0]) {
       scroller(0);
     } else if (
-      (!input[0] && input[1] && input[2]) ||
-      (!input[1] && input[2] && !input[3])
+      input[2] &&
+      ((!input[0] && input[1]) || (!input[1] && !input[3]))
     ) {
       scroller(1);
     } else if (
-      (!input[1] && input[2] && input[3]) ||
-      (!input[2] && input[3] && !input[4])
+      input[3] &&
+      ((!input[1] && input[2]) || (!input[2] && !input[4]))
     ) {
       scroller(2);
-    } else if (!input[2] && input[3] && input[4]) {
+    } else if (
+      input[4] &&
+      ((!input[2] && input[3]) || (!input[3] && !input[5]))
+    ) {
       scroller(3);
-    } else if ((!input[3] && input[4] && input[5]) || input[5]) {
+    } else if (input[5]) {
       scroller(4);
     }
   };
@@ -36,8 +42,9 @@ const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
   return (
     <div
       className={
-        "flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-20 invisible lg:visible transform transition-transform" +
-        (activeView.view !== "main" ? " translate-x-96 " : "")
+        "main flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-20 invisible lg:visible" +
+        (activeView.view !== "main" ? " translate-x-96 " : "") +
+        (activeView.view === "main" ? "" : " main-hidden")
       }
     >
       <h2

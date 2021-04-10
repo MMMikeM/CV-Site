@@ -28,7 +28,7 @@
   }
 
   .wrapper {
-    @apply pb-12 pt-8 md:pb-0 md:pt-24 lg:pt-16 min-vh flex flex-col justify-center items-start lg:-mt-20vh;
+    @apply min-vh flex flex-col justify-center items-start pt-8 md:pt-0 md:-mt-20;
   }
 
   .responsive-container {
@@ -57,29 +57,39 @@
   .mono {
     font-variation-settings: "MONO" 1;
   }
+
+  @screen sm {
+    .min-vh {
+      min-height: calc(100vh - 7rem);
+    }
+  }
   .min-vh {
-    min-height: 100vh;
+    min-height: calc(100vh - 4rem);
   }
   .-mt-20vh {
     margin-bottom: -25vh;
   }
 
   .main {
-    transform: translateX(0vw);
+    transform: translate3d(0, 0, 0);
+    /* transform: translateX(0vw); */
     transition: transform 700ms ease-in-out 50ms;
   }
 
   .main-hidden {
-    transform: translateX(-110vw);
+    transform: translate3d(-110vw, 0, 0);
+    /* transform: translateX(-110vw); */
     transition: transform 700ms ease-in-out;
   }
   .aside {
-    transform: translateX(110vw);
+    transform: translate3d(110vw, 0, 0);
+    /* transform: translateX(110vw); */
     transition: transform 700ms ease-in-out;
   }
 
   .aside-active {
-    transform: translateX(0vw);
+    transform: translate3d(0vw, 0, 0);
+    /* transform: translateX(0vw); */
     transition: transform 700ms ease-in-out 50ms;
   }
 
@@ -109,14 +119,16 @@
 
   .landing {
     transform: translateY(-100vw);
+    /* transform 1000ms ease-in-out 1900ms; */
     opacity: 0;
-    transition: opacity 700ms ease-in 1200ms,
-      transform 1000ms ease-in-out 1900ms;
+    transition: opacity 700ms ease-in 1200ms;
   }
 
   .landing > div {
     transform: translateY(-125vw);
     transition: transform 1000ms ease-in-out 600ms;
+    backface-visibility: hidden;
+    perspective: 1000;
     /* opacity: 0;
     transition: opacity 700ms ease-in 1000ms; */
   }

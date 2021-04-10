@@ -78,8 +78,13 @@ export const App = () => {
   };
 
   return (
-    <div className={"overflow-hidden " + (darkTheme ? "dark" : "")}>
-      <div className="fixed inset-0 bg-black bg-opacity-30"></div>
+    <div
+      className={
+        "flex flex-col-reverse sm:flex-col h-screen text-white bg-gray-900 md:bg-black " +
+        (darkTheme ? "dark" : "")
+      }
+    >
+      {/* <div className="fixed inset-0 bg-black bg-opacity-30"></div> */}
       {/* <Landing /> */}
       <Nav scroller={scroller} />
       <Scroller
@@ -88,26 +93,33 @@ export const App = () => {
         onScreenItems={onScreenItems}
         scroller={scroller}
       />
+
       <div
         className={
-          "main relative bg-gray-900 shadow-lg text-blue-50 flex flex-col px-6 sm:px-16 responsive-container min-h-full mb-16 sm:mb-4" +
+          "main overflow-y-auto flex-grow  " +
           (activeView.view === "main" ? "" : " main-hidden")
         }
       >
-        <Home elementRef={itemsRef[0]} />
-        <About elementRef={itemsRef[1]} />
-        <Tech elementRef={itemsRef[2]} iconList={iconList} />
-        <Experience elementRef={itemsRef[3]} setActiveView={setActiveView} />
-        <Projects elementRef={itemsRef[4]} setActiveView={setActiveView} />
-        <This elementRef={itemsRef[5]} />
+        <div className="bg-gray-900 flex flex-col px-6 sm:px-16 responsive-container pb-16 sm:pb-4 overflow-hidden shadow-lg ">
+          <Home elementRef={itemsRef[0]} />
+          <About elementRef={itemsRef[1]} />
+          <Tech elementRef={itemsRef[2]} iconList={iconList} />
+          <Experience elementRef={itemsRef[3]} setActiveView={setActiveView} />
+          <Projects elementRef={itemsRef[4]} setActiveView={setActiveView} />
+          <This elementRef={itemsRef[5]} />
+        </div>
       </div>
       <div
         className={
-          "aside fixed left-0 right-0 top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
+          // "aside fixed left-0 right-0 top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
+
+          "aside absolute top-0 md:top-16 bottom-12 inset-x-0 overflow-y-auto flex-grow bg-black " +
           (activeView.view !== "main" ? " aside-active" : "")
         }
       >
-        <AsidePage activeView={activeView} setActiveView={setActiveView} />
+        <div className="bg-gray-900 h-full flex flex-col px-6 sm:px-16 responsive-container pb-16 sm:pb-4 shadow-lg">
+          <AsidePage activeView={activeView} setActiveView={setActiveView} />
+        </div>
       </div>
       <Footer footerIcons={footerIcons} />
     </div>
