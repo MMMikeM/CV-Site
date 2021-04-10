@@ -10,6 +10,8 @@ import Projects from "./pages/projects";
 import Landing from "./pages/landing";
 import This from "./pages/this";
 import Nav from "./components/nav";
+import Scroller from "./components/scroller";
+import Footer from "./components/footer";
 
 function useOnScreen(ref) {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -38,6 +40,7 @@ export const App = () => {
   const [activeView, setActiveView] = useState({ view: "main", aside: "" });
   const [navigateClass, setNavigateClass] = useState("");
   const [iconList, setIconList] = useState<any>([]);
+  const [footerIcons, setFooterIcons] = useState<any>([]);
 
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
@@ -49,8 +52,8 @@ export const App = () => {
   };
 
   useEffect(() => {
-    // import("./fonts/font");
     import("./svg/icons").then((icons) => setIconList(icons.default));
+    import("./svg/footericons").then((icons) => setFooterIcons(icons.default));
     setNavigateClass(" csstimer-done");
   }, []);
 
@@ -74,78 +77,17 @@ export const App = () => {
     5: useOnScreen(itemsRef[5]),
   };
 
-  const downScroll = (input) => {
-    if (input[0] && input[1] && !input[2]) {
-      scroller(1);
-    } else if (input[1] && input[2] && !input[3]) {
-      scroller(2);
-    } else if (input[2] && input[3] && !input[4]) {
-      scroller(3);
-    } else if (input[3] && input[4] && !input[5]) {
-      scroller(4);
-    } else if (input[4] && input[5]) {
-      scroller(5);
-    }
-  };
-
-  const upScroll = (input) => {
-    if (input[0]) {
-      scroller(0);
-    } else if (
-      (!input[0] && input[1] && input[2]) ||
-      (!input[1] && input[2] && !input[3])
-    ) {
-      scroller(1);
-    } else if (
-      (!input[1] && input[2] && input[3]) ||
-      (!input[2] && input[3] && !input[4])
-    ) {
-      scroller(2);
-    } else if (!input[2] && input[3] && input[4]) {
-      scroller(3);
-    } else if ((!input[3] && input[4] && input[5]) || input[5]) {
-      scroller(4);
-    }
-  };
-
   return (
     <div className={"overflow-hidden " + (darkTheme ? "dark" : "")}>
-      <Landing />
-
-      <div className=" fixed inset-0 bg-black bg-opacity-30"></div>
+      <div className="fixed inset-0 bg-black bg-opacity-30"></div>
+      {/* <Landing /> */}
       <Nav scroller={scroller} />
-      <div
-        className={
-          "flex justify-start items-end text-white font-bold z-20 fixed right-10 bottom-10 invisible lg:visible transform transition-transform" +
-          (activeView.view !== "main" ? " translate-x-96 " : "")
-        }
-      >
-        <h2
-          className={
-            "mr-4 h3 font-normal text-secondary-400 csstimer" + navigateClass
-          }
-        >
-          Navigate here
-        </h2>
-        <div>
-          <div className="h-12 w-12 mb-2">
-            <button
-              className="bg-white bg-opacity-20 hover:bg-opacity-40 h-full w-full focus:outline-none transform active:scale-110 rotate-180 "
-              onClick={() => upScroll(onScreenItems)}
-            >
-              V
-            </button>
-          </div>
-          <div className="h-12 w-12">
-            <button
-              className="bg-white bg-opacity-20 hover:bg-opacity-40  h-full w-full focus:outline-none transform active:scale-110 "
-              onClick={() => downScroll(onScreenItems)}
-            >
-              V
-            </button>
-          </div>
-        </div>
-      </div>
+      <Scroller
+        activeView={activeView}
+        navigateClass={navigateClass}
+        onScreenItems={onScreenItems}
+        scroller={scroller}
+      />
       <div
         className={
           "main relative bg-gray-900 shadow-lg text-blue-50 flex flex-col px-6 sm:px-16 responsive-container min-h-full mb-16 sm:mb-4" +
@@ -161,12 +103,13 @@ export const App = () => {
       </div>
       <div
         className={
-          "aside left-0 right-0 fixed top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
+          "aside fixed left-0 right-0 top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
           (activeView.view !== "main" ? " aside-active" : "")
         }
       >
         <AsidePage activeView={activeView} setActiveView={setActiveView} />
       </div>
+      <Footer footerIcons={footerIcons} />
     </div>
   );
 };
