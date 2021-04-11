@@ -12,16 +12,16 @@ const Projects = ({ elementRef, setActiveView }) => {
       md:grid-cols-2 md:mb-12 md:px-4 md:gap-y-4"
         >
           <Card
-            title="Carbon Carwash"
-            subtitle="React & Bootstrap"
+            title="Carbon Car Wash"
+            subtitle="React & Bootstrap & SASS"
             classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
             onClick={() => {
               setActiveView({ view: "aside", aside: "ccw" });
             }}
           >
             <p className="text-gray-200">
-              Example paragraph text that I am going to use to describe each
-              project briefly
+              Loyalty and salestracking webapp for a carwash based in Ferndale,
+              serving users, staff and management
             </p>
             <h4 className="mb-4 text-primary-200">July 2020</h4>
           </Card>
@@ -34,8 +34,8 @@ const Projects = ({ elementRef, setActiveView }) => {
             }}
           >
             <p className="text-gray-200">
-              Example paragraph text that I am going to use to describe each
-              project briefly
+              An internal tool to expedite a process whereby the core
+              infrastucture team ensured contention ratios were within spec
             </p>
             <h4 className="mb-4 text-primary-200">February 2021</h4>
           </Card>
@@ -48,22 +48,22 @@ const Projects = ({ elementRef, setActiveView }) => {
             }}
           >
             <p className="text-gray-200">
-              Example paragraph text that I am going to use to describe each
-              project briefly
+              A small tool I used to monitor when stock of a limited edition
+              keyboard dropped
             </p>
             <h4 className="mb-4 text-primary-200">June 2020</h4>
           </Card>
           <Card
             title="Tailwind Datepicker"
-            subtitle="React & Tailwindcss"
+            subtitle="React & Tailwind CSS"
             classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
             onClick={() => {
               setActiveView({ view: "aside", aside: "calendar" });
             }}
           >
             <p className="text-gray-200">
-              Example paragraph text that I am going to use to describe each
-              project briefly
+              Datepicker built with Tailwind as there are currently no easy to
+              solutions that allow for Tailwind integration without
             </p>
             <h4 className="mb-4 text-primary-200">April 2021</h4>
           </Card>

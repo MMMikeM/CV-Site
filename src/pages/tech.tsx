@@ -17,7 +17,11 @@ const Tech = ({ elementRef, iconList }) => {
               <h4 className="mb-4 h3 text-secondary-300 -ml-4">Frameworks</h4>
               <Icon iconList={iconList} name={"SiReact"} />
               <Icon iconList={iconList} name={"SiTypescript"} />
-              <Icon iconList={iconList} name={"SiTailwindcss"} />
+              <Icon
+                iconList={iconList}
+                name={"SiTailwindcss"}
+                pretty={"Tailwind CSS"}
+              />
               <Icon iconList={iconList} name={"SiMaterialUi"} />
               <Icon
                 iconList={iconList}
