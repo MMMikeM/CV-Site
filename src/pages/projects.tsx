@@ -4,10 +4,10 @@ const Projects = ({ elementRef, setActiveView }) => {
   return (
     <div className="wrapper" ref={elementRef}>
       <h2 className="h2 ">Things I have done</h2>
-      <div className="flex md:mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full mx-auto">
+      <div className="flex items-center flex-wrap xl:flex-nowrap w-full mx-auto md:mb-12 gap-4">
         <Card
           title="Carbon Carwash"
-          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px]"
+          classes="w-80 h-80 flex flex-grow flex-col justify-between min-w-[260px]"
           onClick={() => {
             setActiveView({ view: "aside", aside: "ccw" });
           }}
@@ -17,7 +17,7 @@ const Projects = ({ elementRef, setActiveView }) => {
         </Card>
         <Card
           title="Contention Ratio CLI tool"
-          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px]"
+          classes="w-80 h-80 flex  flex-grow flex-col justify-between min-w-[260px]"
           onClick={() => {
             setActiveView({ view: "aside", aside: "cli" });
           }}

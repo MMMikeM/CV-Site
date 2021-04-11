@@ -13,7 +13,7 @@ const Card = ({ children, classes, title, image, onClick }: ChildrenProps) => {
   return (
     <div
       className={
-        "dark:bg-gray-800 bg-gray-800 shadow-sm rounded-sm my-3 lg:mx-3 pt-4 pb-8 px-8 " +
+        "dark:bg-gray-800 bg-gray-800 shadow-sm rounded-sm pt-4 pb-8 px-8 " +
         classes
       }
     >

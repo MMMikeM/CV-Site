@@ -4,10 +4,10 @@ const Experience = ({ elementRef, setActiveView }) => {
   return (
     <div className="wrapper" ref={elementRef}>
       <h2 className="h2">Places I've been</h2>
-      <div className="flex md:mb-12 flex-col items-center lg:flex-row lg:flex-wrap xl:flex-nowrap w-full mx-auto">
+      <div className="flex items-center flex-wrap xl:flex-nowrap w-full mx-auto md:mb-12 gap-4">
         <Card
           title="Junior Frontend Developer"
-          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
+          classes="w-80 h-96 flex flex-grow flex-col justify-between min-w-[260px] "
           onClick={() => {
             setActiveView({ view: "aside", aside: "development" });
           }}
@@ -19,7 +19,7 @@ const Experience = ({ elementRef, setActiveView }) => {
         </Card>
         <Card
           title="Training Manager"
-          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
+          classes="w-80 h-96 flex flex-grow flex-col justify-between min-w-[260px] "
           onClick={() => {
             setActiveView({ view: "aside", aside: "training" });
           }}
@@ -31,7 +31,7 @@ const Experience = ({ elementRef, setActiveView }) => {
         </Card>
         <Card
           title="Network & VOIP Support Engineer"
-          classes="w-80 lg:w-1/3 sm:mr-8 flex flex-col justify-between min-w-[260px] "
+          classes="w-80 h-96 flex flex-grow flex-col justify-between min-w-[260px] "
           onClick={() => {
             setActiveView({ view: "aside", aside: "support" });
           }}

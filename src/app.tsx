@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "preact/hooks";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -84,7 +83,6 @@ export const App = () => {
         (darkTheme ? "dark" : "")
       }
     >
-      {/* <div className="fixed inset-0 bg-black bg-opacity-30"></div> */}
       <Landing />
       <Nav scroller={scroller} />
       <Scroller
@@ -100,7 +98,7 @@ export const App = () => {
           (activeView.view === "main" ? "" : " main-hidden")
         }
       >
-        <div className="bg-gray-900 flex flex-col px-6 sm:px-16 responsive-container pb-16 sm:pb-4 overflow-hidden shadow-lg ">
+        <div className="bg-gray-900 flex flex-col px-6 lg:px-16 responsive-container pb-16 sm:pb-4 overflow-hidden shadow-lg ">
           <Home elementRef={itemsRef[0]} />
           <About elementRef={itemsRef[1]} />
           <Tech elementRef={itemsRef[2]} iconList={iconList} />
@@ -111,13 +109,11 @@ export const App = () => {
       </div>
       <div
         className={
-          // "aside fixed left-0 right-0 top-0 bg-gray-900 shadow-lg h-screen text-blue-50 flex flex-col px-4 sm:px-16 responsive-container min-h-full overflow-y-scroll sm:overflow-y-hidden" +
-
-          "aside absolute top-0 md:top-16 bottom-12 inset-x-0 overflow-y-auto flex-grow bg-black " +
+          "aside absolute top-0 sm:top-16 bottom-16 md:bottom-12 md:inset-x-12 overflow-y-auto flex-grow bg-gray-900 " +
           (activeView.view !== "main" ? " aside-active" : "")
         }
       >
-        <div className="bg-gray-900 h-full flex flex-col px-6 sm:px-16 responsive-container pb-16 sm:pb-4 shadow-lg">
+        <div className="bg-gray-900 flex flex-col px-6 lg:px-16 responsive-container min-h-full pb-4 shadow-lg">
           <AsidePage activeView={activeView} setActiveView={setActiveView} />
         </div>
       </div>
