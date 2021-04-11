@@ -5,6 +5,8 @@ import Training from "./experience/training";
 import Support from "./experience/support";
 import CCW from "./projects/ccw";
 import CLI from "./projects/cli";
+import Scraper from "./projects/scraper";
+import Calendar from "./projects/calendar";
 
 const AsidePage = ({ setActiveView, activeView }) => {
   const page = () => {
@@ -19,6 +21,10 @@ const AsidePage = ({ setActiveView, activeView }) => {
         return <CCW />;
       case "cli":
         return <CLI />;
+      case "scraper":
+        return <Scraper />;
+      case "calendar":
+        return <Calendar />;
       default:
         return "";
     }
