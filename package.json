@@ -1,10 +1,12 @@
 {
   "name": "cv-site",
   "version": "0.0.1",
+  "homepage": "https://github.com/MMMikeM/CV-Site",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "preact": "^10.5.13"
@@ -13,6 +15,7 @@
     "@preact/preset-vite": "^2.0.0",
     "@tailwindcss/jit": "^0.1.13",
     "autoprefixer": "^10.2.5",
+    "gh-pages": "^3.1.0",
     "postcss": "^8.2.8",
     "tailwindcss": "^2.0.4",
     "typescript": "^4.1.3",
