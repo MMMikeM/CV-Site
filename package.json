@@ -1,12 +1,13 @@
 {
   "name": "cv-site",
   "version": "0.0.1",
-  "homepage": "https://github.com/MMMikeM/CV-Site",
+  "homepage": "https://mmmikem.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d dist"
   },
   "dependencies": {
     "preact": "^10.5.13"

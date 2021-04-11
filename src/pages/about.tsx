@@ -39,7 +39,7 @@ const About = ({ elementRef }) => {
           </p>
         </div>
         <div className="h-80 md:h-auto w-full sm:w-1/2 lg:w-2/5 2xl:w-1/4 md:ml-10 mt-8 md:mt-0 mb-8 md:mb-0 flex-grow flex justify-center items-center">
-          <img src="https://raw.githubusercontent.com/MMMikeM/MMMikeM.github.io/main/photo.jpg" />
+          <img src="https://MMMikeM.github.io/assets/photo.jpg" />
         </div>
       </div>
     </div>
