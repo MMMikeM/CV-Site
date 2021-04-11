@@ -10,7 +10,7 @@
     @apply text-xl sm:text-2xl my-2 mono;
   }
   .h4 {
-    @apply text-lg sm:text-xl my-2 mono;
+    @apply text-xl sm:text-xl my-2 mono font-medium;
   }
   .h5 {
     @apply text-base sm:text-lg my-2 mono;

@@ -8,6 +8,11 @@ module.exports = {
       colors: {
         secondary: colors.emerald,
         primary: colors.lightBlue,
+        gray: {
+          850: "#18212F",
+          925: "#0D121E",
+          950: "#090C14",
+        },
       },
       fontFamily: {
         sans: [
@@ -24,8 +29,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [],
 };

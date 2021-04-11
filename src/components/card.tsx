@@ -4,21 +4,38 @@ import { ComponentChildren } from "preact";
 type ChildrenProps = {
   children: ComponentChildren;
   title?: string;
+  subtitle?: string;
   classes?: string;
+  overrideClasses?: string;
   image?: { url: string };
   onClick?: any;
 };
 
-const Card = ({ children, classes, title, image, onClick }: ChildrenProps) => {
+const Card = ({
+  children,
+  classes,
+  overrideClasses,
+  title,
+  image,
+  onClick,
+  subtitle,
+}: ChildrenProps) => {
   return (
     <div
       className={
-        "dark:bg-gray-800 bg-gray-800 shadow-sm rounded-sm pt-4 pb-8 px-8 " +
-        classes
+        overrideClasses ||
+        "bg-gray-850 shadow-md rounded-sm pt-4 pb-8 px-10 " + classes
       }
     >
       {image ? <img src={image.url} /> : ""}
-      {title ? <h3 className="h3 mb-4 h-auto lg:h-16">{title}</h3> : ""}
+      <div className="mb-4 h-auto lg:h-16">
+        {title ? <h3 className="h3 ">{title}</h3> : ""}
+        {subtitle ? (
+          <h4 className="h6 text-gray-400 -mt-1 ">{subtitle}</h4>
+        ) : (
+          ""
+        )}
+      </div>
       {children}
       {onClick ? (
         <div className="flex justify-start ">

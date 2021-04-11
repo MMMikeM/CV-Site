@@ -79,7 +79,7 @@ export const App = () => {
   return (
     <div
       className={
-        "flex flex-col-reverse sm:flex-col h-screen text-white bg-gray-900 md:bg-black " +
+        "flex flex-col-reverse sm:flex-col h-screen text-white bg-gray-950 md:bg-black " +
         (darkTheme ? "dark" : "")
       }
     >
@@ -98,7 +98,7 @@ export const App = () => {
           (activeView.view === "main" ? "" : " main-hidden")
         }
       >
-        <div className="bg-gray-900 flex flex-col px-6 lg:px-16 responsive-container pb-16 sm:pb-4 overflow-hidden shadow-lg ">
+        <div className="bg-gray-950 flex flex-col px-6 lg:px-16 responsive-container pb-16 sm:pb-4 overflow-hidden shadow-md ">
           <Home elementRef={itemsRef[0]} />
           <About elementRef={itemsRef[1]} />
           <Tech elementRef={itemsRef[2]} iconList={iconList} />
@@ -109,11 +109,11 @@ export const App = () => {
       </div>
       <div
         className={
-          "aside absolute top-0 sm:top-16 bottom-16 md:bottom-12 inset-x-0 overflow-y-auto flex-grow bg-gray-900 " +
+          "aside absolute top-0 sm:top-16 bottom-16 md:bottom-12 inset-x-0 overflow-y-auto flex-grow bg-gray-950 " +
           (activeView.view !== "main" ? " aside-active" : "")
         }
       >
-        <div className="bg-gray-900 flex flex-col px-6 lg:px-16 responsive-container min-h-full pb-4 shadow-lg">
+        <div className="bg-gray-950 flex flex-col px-6 lg:px-16 responsive-container min-h-full pb-4 shadow-md">
           <AsidePage activeView={activeView} setActiveView={setActiveView} />
         </div>
       </div>

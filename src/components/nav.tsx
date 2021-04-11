@@ -1,7 +1,7 @@
 const Nav = ({ scroller }) => {
   return (
-    <div className="shadow-lg bg-gray-800 text-xs font-light text-secondary-200 fixed sm:static bottom-0 inset-x-0 z-10">
-      <div className="responsive-container h-16 flex justify-around sm:justify-start items-center ">
+    <div className="text-xs bg-gray-800 font-light text-secondary-200 fixed sm:static bottom-0 inset-x-0 z-10">
+      <div className="shadow-md responsive-container h-16 flex justify-around sm:justify-start items-center ">
         <button className="nav-item" onClick={() => scroller(0)}>
           Home
         </button>

@@ -6,8 +6,12 @@ const Experience = ({ elementRef, setActiveView }) => {
       <h2 className="h2">Places I've been</h2>
       <div
         className="
-      grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3
-      w-full md:mb-12 gap-4 place-items-stretch px-4 md:px-0"
+      w-full 
+      grid grid-cols-1 gap-4 place-items-stretch px-4 
+      sm:grid-cols-2 
+      md:mb-12 md:px-0
+      xl:grid-cols-3
+      "
       >
         <Card
           title="Junior Frontend Developer"

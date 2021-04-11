@@ -1,6 +1,6 @@
 const This = ({ elementRef }) => {
   return (
-    <div ref={elementRef} className="wrapper h-1/3 -mb-12">
+    <div ref={elementRef} className="wrapper h-1/3 mb-12 pt-12">
       <h2 className="h2">Some fun things about this site</h2>
       <p>
         I debated heavily between using a static site generator or writing a SPA
@@ -9,7 +9,6 @@ const This = ({ elementRef }) => {
         new pages. Even serving a custom font from the front end, I was able to
         keep a smaller bundle size than a basic CRA.
       </p>
-
       <p>
         After much deliberation, I built it using Preact, Typescript and
         Tailwind CSS's just-in-time compiler. By lazy loading the both the font
@@ -42,7 +41,6 @@ const This = ({ elementRef }) => {
           <td>1.4s</td>
         </tr>
       </table>
-
       <p>
         I was quite impressed with the bundle size improvement I gained by using
         Preact. It was able to provide all functionality I needed, while
