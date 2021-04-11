@@ -3,8 +3,8 @@ const CCW = () => {
     <div className="flex flex-col justify-between">
       <h2 className="h2 mb-4">Carbon Car Wash</h2>
       <h4 className="h4 mb-4 font-normal mono">
-        Period:{" "}
-        <span className="text-secondary-300">
+        Period:
+        <span className="text-secondary-300 ml-2">
           June 2020 - Present (maintenance and feature adds)
         </span>
       </h4>

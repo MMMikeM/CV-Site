@@ -4,7 +4,7 @@ const Calendar = () => {
       <h2 className="h2 mb-4">Tailwind Datepicker</h2>
       <h4 className="h4 mb-4 font-normal mono">
         Period:
-        <span className="text-secondary-300">April 2021</span>
+        <span className="text-secondary-300 ml-2">April 2021</span>
       </h4>
       <h3 className="h3 text-primary-200">Achievements</h3>
       <ul className="ml-8 list-disc">
