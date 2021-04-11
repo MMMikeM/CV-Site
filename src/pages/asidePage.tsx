@@ -47,9 +47,9 @@ const AsidePage = ({ setActiveView, activeView }) => {
   return (
     <div className="px-2 pt-4 flex-grow flex flex-col justify-center" ref={ref}>
       {page()}
-      <div className="flex justify-between">
+      <div className="flex justify-between -ml-2 -mr-2 md:mx-0">
         <button
-          className="bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white h-12 w-48 mt-12 mb-4 rounded-sm"
+          className="bg-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 text-white h-12 w-36 md:w-48 mt-12 mb-4 rounded-sm"
           onClick={() => {
             ref.current.scrollIntoView({ behavior: "smooth" });
             setActiveView({ ...activeView, view: "main" });
@@ -60,7 +60,7 @@ const AsidePage = ({ setActiveView, activeView }) => {
         <a
           target="_blank"
           href={links[activeView.aside]}
-          className="flex justify-center items-center cursor-pointer border-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 border-2 text-white h-12 w-48 mt-12 mb-4 rounded-sm"
+          className="flex justify-center items-center cursor-pointer border-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 border-2 text-white h-12 w-36 md:w-48 mt-12 mb-4 rounded-sm"
         >
           Github Repo
         </a>
