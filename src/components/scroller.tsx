@@ -1,41 +1,44 @@
 const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
-  const downScroll = (input) => {
-    console.log(input);
-    if (input[0] && !input[2]) {
-      scroller(1);
-    } else if (input[1] && input[2] && !input[3]) {
-      console.log("wat");
-      scroller(2);
-    } else if (input[2] && input[3] && !input[4]) {
-      scroller(3);
-    } else if (input[3] && input[4] && !input[5]) {
-      scroller(4);
-    } else if (input[4] && input[5]) {
-      scroller(5);
-    }
-  };
+  // const downScroll = (dir, input) => {
+  //   console.log(input);
 
-  const upScroll = (input) => {
-    console.log(input);
-    if (input[0]) {
-      scroller(0);
+  //   if (input[0] && !input[2]) {
+  //     scroller(1);
+  //   } else if (input[1] && input[2] && !input[3]) {
+  //     scroller(2);
+  //   } else if (input[2] && input[3] && !input[4]) {
+  //     scroller(3);
+  //   } else if (input[2] && input[3] && input[4] && !input[5]) {
+  //     scroller(4);
+  //   } else if ((!input[2] || input[5]) && input[4]) {
+  //     scroller(5);
+  //   }
+  // };
+
+  const scroll = (input, dir) => {
+    let index = dir === "up" ? 0 : 2;
+    if (input[0] && !input[2]) {
+      dir === "up" ? scroller(0) : scroller(1);
+      // scroller(-1 + index);
+    } else if (input[1] && (input[0] || (!input[0] && !input[2]))) {
+      scroller(0 + index);
     } else if (
       input[2] &&
       ((!input[0] && input[1]) || (!input[1] && !input[3]))
     ) {
-      scroller(1);
+      scroller(1 + index);
     } else if (
       input[3] &&
       ((!input[1] && input[2]) || (!input[2] && !input[4]))
     ) {
-      scroller(2);
+      scroller(2 + index);
     } else if (
       input[4] &&
       ((!input[2] && input[3]) || (!input[3] && !input[5]))
     ) {
-      scroller(3);
+      scroller(3 + index);
     } else if (input[5]) {
-      scroller(4);
+      dir === "up" ? scroller(4) : scroller(5);
     }
   };
 
@@ -58,7 +61,7 @@ const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
         <div className="h-12 w-12 mb-2">
           <button
             className="bg-white bg-opacity-20 hover:bg-opacity-40 h-full w-full focus:outline-none transform active:scale-110 rotate-180 "
-            onClick={() => upScroll(onScreenItems)}
+            onClick={() => scroll(onScreenItems, "up")}
           >
             V
           </button>
@@ -66,7 +69,7 @@ const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
         <div className="h-12 w-12">
           <button
             className="bg-white bg-opacity-20 hover:bg-opacity-40  h-full w-full focus:outline-none transform active:scale-110 "
-            onClick={() => downScroll(onScreenItems)}
+            onClick={() => scroll(onScreenItems, "down")}
           >
             V
           </button>
