@@ -19,12 +19,12 @@ const Calendar = () => {
         <li className="experience-item">
           Component is being used in an opensource project
         </li>
-        <img
-          className="w-1/3"
-          src="https://raw.githubusercontent.com/MMMikeM/useLilius-tailwindcss-calendar/main/src.gif"
-          alt="Cool date picker gif"
-        />
       </ul>
+      <img
+        className="w-full md:w-1/3 mt-8"
+        src="https://raw.githubusercontent.com/MMMikeM/useLilius-tailwindcss-calendar/main/src.gif"
+        alt="Cool date picker gif"
+      />
     </div>
   );
 };
