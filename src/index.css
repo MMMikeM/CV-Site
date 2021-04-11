@@ -45,7 +45,7 @@
   }
 
   .nav-item {
-    @apply px-1 sm:px-4 h-12 text-[10px] sm:text-sm font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
+    @apply w-1/5 sm:w-auto  px-1 sm:px-4 h-12 text-[10px] sm:text-sm font-semibold sm:font-normal text-center hover:border-secondary-900 border-2 border-gray-800 hover:border-2 hover:text-secondary-300 active:bg-secondary-500 active:text-white focus:outline-none;
   }
 
   .experience-item {

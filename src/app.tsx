@@ -109,7 +109,7 @@ export const App = () => {
       </div>
       <div
         className={
-          "aside absolute top-0 sm:top-16 bottom-16 md:bottom-12 md:inset-x-12 overflow-y-auto flex-grow bg-gray-900 " +
+          "aside absolute top-0 sm:top-16 bottom-16 md:bottom-12 inset-x-0 overflow-y-auto flex-grow bg-gray-900 " +
           (activeView.view !== "main" ? " aside-active" : "")
         }
       >
