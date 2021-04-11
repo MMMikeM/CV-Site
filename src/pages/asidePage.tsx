@@ -57,13 +57,17 @@ const AsidePage = ({ setActiveView, activeView }) => {
         >
           Return
         </button>
-        <a
-          target="_blank"
-          href={links[activeView.aside]}
-          className="flex justify-center items-center cursor-pointer border-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 border-2 text-white h-12 w-36 md:w-48 mt-12 mb-4 rounded-sm"
-        >
-          Github Repo
-        </a>
+        {links[activeView.aside] ? (
+          <a
+            target="_blank"
+            href={links[activeView.aside]}
+            className="flex justify-center items-center cursor-pointer border-secondary-600 hover:bg-secondary-500 active:bg-secondary-600 border-2 text-white h-12 w-36 md:w-48 mt-12 mb-4 rounded-sm"
+          >
+            Github Repo
+          </a>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
