@@ -1,15 +1,17 @@
 const About = ({ elementRef }) => {
   return (
     <div className="wrapper" ref={elementRef}>
-      <div className="flex -mr-12">
-        <h2 className="h2 mb-8 mr-4">About me = </h2>
-        <h3 className="font-light text-primary-300 -mt-1 ml-3">
-          {"{"}
-          education: "BSc Construction & Project Management",
-          <h3 className="font-light text-primary-300"></h3>
-          location:"Johannesburg"
-          {"}"}
-        </h3>
+      <div className="flex flex-col md:flex-row md:-mr-12">
+        <h2 className="h2 mb-2 md:mb-8 md:mr-4">About me = </h2>
+        <div className="mb-4 md:mb-0">
+          <h3 className="font-light text-primary-300 -mt-1 md:ml-3">
+            {"{"}
+            education: "BSc Construction & Project Management",
+            <h3 className="font-light text-primary-300"></h3>
+            location:"Johannesburg"
+            {"}"}
+          </h3>
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row">
