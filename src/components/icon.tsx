@@ -13,7 +13,7 @@ const Icon = ({
   width?: string;
   height?: string;
 }) => {
-  const icon = iconList?.filter((item) => item.title === name)[0];
+  const icon = iconList?.find((item) => item.title === name);
   return (
     <div className={"li text-primary-100 fill-current " + svgClass || ""}>
       <svg

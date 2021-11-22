@@ -6,7 +6,8 @@ const Training = () => {
         Company: <span className="text-secondary-300">Saicom</span>
       </h4>
       <h4 className="h4 mb-4 font-normal mono">
-        Period: <span className="text-secondary-300">Aug 2019 - June 2020</span>
+        Period:{" "}
+        <span className="text-secondary-300">January 2019 - December 2020</span>
       </h4>
       <h3 className="h3 text-primary-200">Key responsibilities</h3>
       <ul className="ml-8 list-disc">

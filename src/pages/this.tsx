@@ -44,7 +44,9 @@ const This = ({ elementRef }) => {
       <p>
         I was quite impressed with the bundle size improvement I gained by using
         Preact. It was able to provide all functionality I needed, while
-        maintaining performance that is competitive with static sites.
+        maintaining performance that is competitive with static sites. These
+        numbers are preliminary, as the page grows, but it has proven to be
+        enough fo a difference to continue in this direction.
       </p>
     </div>
   );

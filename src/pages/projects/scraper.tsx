@@ -10,7 +10,7 @@ const Scraper = () => {
       <ul className="ml-8 list-disc">
         <li className="experience-item mt-4">
           Used code to solve a real world problem I faced - 100 in-stock units
-          which sold out in ~90 seconds and accumulated 5000 preorders in 24h
+          which sold out in ~90 seconds and accumulated 5000 pre-orders in 24h
         </li>
         <li className="experience-item">
           Scraped a website to check for stock using Cron Jobs in WSL

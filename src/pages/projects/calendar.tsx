@@ -10,14 +10,14 @@ const Calendar = () => {
       <ul className="ml-8 list-disc">
         <li className="experience-item mt-4">
           Assisted a junior developer with building a date picker component that
-          can be used with Tailwind Css
+          can be used with Tailwind CSS
         </li>
         <li className="experience-item">
           Made use of a headless calendar hook, useLilius to expedite the
           process
         </li>
         <li className="experience-item">
-          Component is being used in an opensource project
+          Component is being used in an open source project
         </li>
       </ul>
       <img

@@ -3,7 +3,7 @@ import Icon from "../components/icon";
 const Footer = ({ footerIcons }) => {
   return (
     <div className="bg-gray-800 shadow-md md:block hidden">
-      {footerIcons.length ? (
+      {!!footerIcons.length && (
         <div className="h-12 flex text-sm font-light responsive-container items-center gap-2 px-4 sm:static bottom-0">
           <a
             className="hover:text-primary-400 text-primary-200 fill-current flex mr-4"
@@ -38,8 +38,6 @@ const Footer = ({ footerIcons }) => {
             <h6 className="text-sm ml-4">My Github page</h6>
           </a>
         </div>
-      ) : (
-        ""
       )}
     </div>
   );

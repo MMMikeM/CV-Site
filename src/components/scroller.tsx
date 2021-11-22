@@ -1,25 +1,10 @@
 const Scroller = ({ activeView, navigateClass, scroller, onScreenItems }) => {
-  // const downScroll = (dir, input) => {
-  //   console.log(input);
-
-  //   if (input[0] && !input[2]) {
-  //     scroller(1);
-  //   } else if (input[1] && input[2] && !input[3]) {
-  //     scroller(2);
-  //   } else if (input[2] && input[3] && !input[4]) {
-  //     scroller(3);
-  //   } else if (input[2] && input[3] && input[4] && !input[5]) {
-  //     scroller(4);
-  //   } else if ((!input[2] || input[5]) && input[4]) {
-  //     scroller(5);
-  //   }
-  // };
+  // There is some wild logic here to make sure that the scroller works on desktop and mobile, the app is set up so each section views as a page, roughly 100vh.
 
   const scroll = (input, dir) => {
     let index = dir === "up" ? 0 : 2;
     if (input[0] && !input[2]) {
       dir === "up" ? scroller(0) : scroller(1);
-      // scroller(-1 + index);
     } else if (input[1] && (input[0] || (!input[0] && !input[2]))) {
       scroller(0 + index);
     } else if (

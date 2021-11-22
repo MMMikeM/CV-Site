@@ -70,26 +70,23 @@
     margin-bottom: -25vh;
   }
 
+  /* The transforms below ensures that the animations are handled with hardware acceleration */
   .main {
     transform: translate3d(0, 0, 0);
-    /* transform: translateX(0vw); */
     transition: transform 700ms ease-in-out 50ms;
   }
 
   .main-hidden {
     transform: translate3d(-110vw, 0, 0);
-    /* transform: translateX(-110vw); */
     transition: transform 700ms ease-in-out;
   }
   .aside {
     transform: translate3d(110vw, 0, 0);
-    /* transform: translateX(110vw); */
     transition: transform 700ms ease-in-out;
   }
 
   .aside-active {
     transform: translate3d(0vw, 0, 0);
-    /* transform: translateX(0vw); */
     transition: transform 700ms ease-in-out 50ms;
   }
 
@@ -120,11 +117,11 @@
   .landing {
     transform: translate3d(0, -100vh, 0);
     opacity: 0;
-    transition: opacity 700ms ease-in 750ms, transform 0ms ease-in-out 1450ms;
+    transition: opacity 700ms ease-in 1050ms, transform 0ms ease-in-out 1750ms;
   }
 
   .landing > div {
     transform: translate3d(0, -100vh, 0);
-    transition: transform 1000ms ease-out 600ms;
+    transition: transform 1300ms ease-out 600ms;
   }
 }

@@ -1,16 +1,22 @@
 import { useRef } from "preact/hooks";
 
 import Development from "./experience/development";
+import Teamlead from "./experience/teamlead";
 import Training from "./experience/training";
 import Support from "./experience/support";
 import CCW from "./projects/ccw";
 import CLI from "./projects/cli";
 import Scraper from "./projects/scraper";
 import Calendar from "./projects/calendar";
+import Movies from "./projects/movies";
+import Resizer from "./projects/resizer";
 
 const AsidePage = ({ setActiveView, activeView }) => {
+  // This essentially acts as a portion of my router
   const page = () => {
     switch (activeView.aside) {
+      case "teamlead":
+        return <Teamlead />;
       case "development":
         return <Development />;
       case "training":
@@ -25,6 +31,10 @@ const AsidePage = ({ setActiveView, activeView }) => {
         return <Scraper />;
       case "calendar":
         return <Calendar />;
+      case "movies":
+        return <Movies />;
+      case "resizer":
+        return <Resizer />;
       default:
         return "";
     }
@@ -32,14 +42,11 @@ const AsidePage = ({ setActiveView, activeView }) => {
 
   const links = {
     ccw: "https://github.com/MMMikeM/car-wash-frontend",
-    cli: "",
+    cli: "https://github.com/MMMikeM/contention-cli-tool",
     scraper: "https://github.com/MMMikeM/Scraper",
     calendar: "https://github.com/MMMikeM/useLilius-tailwindcss-calendar",
-  };
-
-  const scroll = () => {
-    // window.scrollTo(0, 0);
-    ref.current.scrollIntoView();
+    movies: "https://github.com/MMMikeM/MMMovies",
+    resizer: "https://github.com/MMMikeM/Image-Resizer",
   };
 
   const ref = useRef<HTMLDivElement>(null);
@@ -57,7 +64,7 @@ const AsidePage = ({ setActiveView, activeView }) => {
         >
           Return
         </button>
-        {links[activeView.aside] ? (
+        {!!links[activeView.aside] && (
           <a
             target="_blank"
             href={links[activeView.aside]}
@@ -65,8 +72,6 @@ const AsidePage = ({ setActiveView, activeView }) => {
           >
             Github Repo
           </a>
-        ) : (
-          ""
         )}
       </div>
     </div>

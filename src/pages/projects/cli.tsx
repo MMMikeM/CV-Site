@@ -8,7 +8,7 @@ const CLI = () => {
       <h3 className="h3 text-primary-200">Achievements</h3>
       <ul className="ml-8 list-disc">
         <li className="experience-item mt-4">
-          Built CLI tool to automate calculation of contention ratios based on
+          Built a CLI tool to automate calculation of contention ratios based on
           different interconnects
         </li>
         <li className="experience-item">Jest for test driven development</li>

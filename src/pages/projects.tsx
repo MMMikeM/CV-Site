@@ -12,18 +12,45 @@ const Projects = ({ elementRef, setActiveView }) => {
       md:grid-cols-2 md:mb-12 md:px-4 md:gap-y-4"
         >
           <Card
-            title="Carbon Car Wash"
-            subtitle="React & Bootstrap & SASS"
+            title="Image Resizer"
+            subtitle="Fastify"
             classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
             onClick={() => {
-              setActiveView({ view: "aside", aside: "ccw" });
+              setActiveView({ view: "aside", aside: "resizer" });
             }}
           >
             <p className="text-gray-200">
-              Loyalty and salestracking webapp for a carwash based in Ferndale,
-              serving users, staff and management
+              A service to resize images, with the intention of serving meta
+              tags for Opengraph and twitter cards
             </p>
-            <h4 className="mb-4 text-primary-200">July 2020</h4>
+            <h4 className="mb-4 text-primary-200">Nov 2021</h4>
+          </Card>
+          <Card
+            title="MMMovies"
+            subtitle="Express, Pug & Tailwind"
+            classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
+            onClick={() => {
+              setActiveView({ view: "aside", aside: "movies" });
+            }}
+          >
+            <p className="text-gray-200">
+              An Express based MVC webapp to manange movies to be watched
+            </p>
+            <h4 className="mb-4 text-primary-200">May 2021</h4>
+          </Card>
+          <Card
+            title="Tailwind Datepicker"
+            subtitle="React & Tailwind CSS"
+            classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
+            onClick={() => {
+              setActiveView({ view: "aside", aside: "calendar" });
+            }}
+          >
+            <p className="text-gray-200">
+              Datepicker built with Tailwind as there are currently no easy to
+              use solutions that allow for Tailwind integration without
+            </p>
+            <h4 className="mb-4 text-primary-200">April 2021</h4>
           </Card>
           <Card
             title="Contention Ratio CLI tool"
@@ -35,10 +62,25 @@ const Projects = ({ elementRef, setActiveView }) => {
           >
             <p className="text-gray-200">
               An internal tool to expedite a process whereby the core
-              infrastucture team ensured contention ratios were within spec
+              infrastructure team ensured contention ratios were within spec
             </p>
             <h4 className="mb-4 text-primary-200">February 2021</h4>
           </Card>
+          <Card
+            title="Carbon Car Wash"
+            subtitle="React & Bootstrap & SASS"
+            classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
+            onClick={() => {
+              setActiveView({ view: "aside", aside: "ccw" });
+            }}
+          >
+            <p className="text-gray-200">
+              Loyalty and sales tracking webapp for a car wash based in
+              Ferndale, serving users, staff and management
+            </p>
+            <h4 className="mb-4 text-primary-200">July 2020</h4>
+          </Card>
+
           <Card
             title="Web scraper"
             subtitle="NodeJS"
@@ -52,20 +94,6 @@ const Projects = ({ elementRef, setActiveView }) => {
               keyboard dropped
             </p>
             <h4 className="mb-4 text-primary-200">June 2020</h4>
-          </Card>
-          <Card
-            title="Tailwind Datepicker"
-            subtitle="React & Tailwind CSS"
-            classes="min-h-[240px] md:h-80 flex flex-grow flex-col justify-between min-w-[240px]"
-            onClick={() => {
-              setActiveView({ view: "aside", aside: "calendar" });
-            }}
-          >
-            <p className="text-gray-200">
-              Datepicker built with Tailwind as there are currently no easy to
-              solutions that allow for Tailwind integration without
-            </p>
-            <h4 className="mb-4 text-primary-200">April 2021</h4>
           </Card>
         </div>
       </div>

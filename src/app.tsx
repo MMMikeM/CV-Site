@@ -15,11 +15,13 @@ import Footer from "./components/footer";
 function useOnScreen(ref) {
   const [isIntersecting, setIntersecting] = useState(false);
 
+  // This would need a polyfill for older browsers, but supports 94% of browsers, so not worth the extra weight
   const observer = new IntersectionObserver(([entry]) =>
     setIntersecting(entry.isIntersecting)
   );
 
   useEffect(() => {
+    // Add the observer to the DOM to watch the element
     observer.observe(ref.current);
     // Remove the observer as soon as the component is unmounted
     return () => {
@@ -31,8 +33,10 @@ function useOnScreen(ref) {
 }
 
 export const App = () => {
+  // setting the dark state lazily, so this function is called only once
   const [darkTheme, setDarkTheme] = useState(
-    localStorage.darkTheme === "true" ||
+    () =>
+      localStorage.darkTheme === "true" ||
       (localStorage.darkTheme === undefined &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
@@ -41,6 +45,7 @@ export const App = () => {
   const [iconList, setIconList] = useState<any>([]);
   const [footerIcons, setFooterIcons] = useState<any>([]);
 
+  // creating refs to set up the scoll points
   const itemsRef = Array.from([...Array(10).keys()], () =>
     useRef<HTMLDivElement>(null)
   );
@@ -50,12 +55,14 @@ export const App = () => {
     setDarkTheme(!darkTheme);
   };
 
+  // lazy loading icons and adding class to trigger animation, these are SVG paths that I use to generate full SVGs, to save some repeated code
   useEffect(() => {
     import("./svg/icons").then((icons) => setIconList(icons.default));
     import("./svg/footericons").then((icons) => setFooterIcons(icons.default));
     setNavigateClass(" csstimer-done");
   }, []);
 
+  // setting up the scroller, in lieu of using a traditional router
   const scroller = (input: number) => {
     if (activeView.aside === "aside") {
       itemsRef[input].current.scrollIntoView({});
@@ -67,6 +74,7 @@ export const App = () => {
     setActiveView({ ...activeView, view: "main" });
   };
 
+  // an object to watch what items are on screen
   const onScreenItems = {
     0: useOnScreen(itemsRef[0]),
     1: useOnScreen(itemsRef[1]),

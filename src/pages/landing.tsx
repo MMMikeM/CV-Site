@@ -3,6 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 const Landing = () => {
   const [classes, setClasses] = useState("");
 
+  // The font is the heaviest file in this project, so I lazy load this while the animation is running
   useEffect(() => {
     import("../fonts/font");
     setClasses(" landing");

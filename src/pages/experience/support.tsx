@@ -7,7 +7,7 @@ const Support = () => {
       </h4>
       <h4 className="h4 mb-4 font-normal mono">
         Period:{" "}
-        <span className="text-secondary-300">July 2018 - July 2019</span>
+        <span className="text-secondary-300">July 2018 - December 2018</span>
       </h4>
       <h3 className="h3 text-primary-200">Key responsibilities</h3>
       <ul className="ml-8 list-disc">
@@ -23,7 +23,7 @@ const Support = () => {
         <li className="experience-item">
           Project lead for Microsoft365 to G-Suite Migration
         </li>
-        <li className="experience-item">G-Suite superadmin</li>
+        <li className="experience-item">G-Suite super admin</li>
         <li className="experience-item">Administrating Zendesk</li>
         <li className="experience-item">Internal IT</li>
         <li className="experience-item">

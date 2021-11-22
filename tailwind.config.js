@@ -9,9 +9,9 @@ module.exports = {
         secondary: colors.emerald,
         primary: colors.lightBlue,
         gray: {
-          850: "#18212F",
-          925: "#0D121E",
-          950: "#090C14",
+          850: "#1d222b",
+          925: "#0e121b",
+          950: "#0b0d13",
         },
       },
       fontFamily: {

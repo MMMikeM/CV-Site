@@ -1,3 +1,6 @@
+import PhotoJPG from "../photo.jpg";
+import PhotoWEBP from "../photo.webp";
+
 const About = ({ elementRef }) => {
   return (
     <div className="wrapper" ref={elementRef}>
@@ -25,7 +28,7 @@ const About = ({ elementRef }) => {
             requests.
           </p>
           <p className="pb-2 text-sm md:text-base">
-            I am a driven individual, my friends would describe me as high
+            I am a driven individual; my friends would describe me as high
             energy and full of jokes. In my free time, I enjoy keeping fit,
             playing soccer and trying to learn something new every day;
             occasionally, I spend some time practising typing or questioning
@@ -39,7 +42,12 @@ const About = ({ elementRef }) => {
           </p>
         </div>
         <div className="h-80 md:h-auto w-full sm:w-1/2 lg:w-2/5 2xl:w-1/4 md:ml-10 mt-8 md:mt-0 mb-8 md:mb-0 flex-grow flex justify-center items-center">
-          <img src="https://MMMikeM.github.io/assets/photo.jpg" />
+          {/* below is how I am able to serve webp or jpeg depending on browser support, the element has 97% coverage, where wepb only has 92%  */}
+          <picture>
+            <source srcset={PhotoWEBP} type="image/webp" />
+            <source srcset={PhotoJPG} type="image/jpeg" />
+            <img src={PhotoJPG} alt="Alt Text!" />
+          </picture>
         </div>
       </div>
     </div>

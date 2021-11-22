@@ -34,7 +34,7 @@ const About = ({ elementRef }) => {
           <span className="">Interface designer</span>
         </h2>
         <h2 className="-mt-1.5 text-white pl-4 xl:text-3xl mono font-medium">
-          )
+          {")"}
         </h2>
         <h2 className=" text-white xl:text-3xl">{"}"}</h2>
       </div>
